@@ -1,0 +1,32 @@
+{
+	"record": {
+		"active_role_states": {
+
+		},
+		"ai_can_continue": false,
+		"attempt": 12,
+		"current_phase": "実装",
+		"execution_state": "TERMINAL",
+		"generation": 10,
+		"issue_number": 1,
+		"issue_url": "issue-ref:memoryreframedlab/ai-virtual-office#1",
+		"judgment_event_id": "",
+		"progress_ratio": 0.0,
+		"project_id": "ai-virtual-office",
+		"receipt_id": "88d8905df03c408f82bdb03c065adab0",
+		"repository_full_name": "memoryreframedlab/ai-virtual-office",
+		"repository_id": "R_kgDOUh1Rfw",
+		"request_id": "b8a137791c9941e4dd637de00872075d",
+		"resolution_state": "UNKNOWN_BLOCKED",
+		"run_id": "35550865312",
+		"safe_reason_code": "",
+		"safe_reason_text": "",
+		"seq": 117,
+		"source_kind": "github_ashuraman",
+		"source_updated_at": 1789954692,
+		"state_code": "completed",
+		"user_action_required": false,
+		"workspace_digest": "88c4c3c44f5b0d0498a1423f29f523ea5aa73bd9318ddcd099e6cd94f3fe7f33"
+	},
+	"schema_version": 1
+}
