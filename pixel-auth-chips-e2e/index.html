@@ -116,6 +116,19 @@ var ALLOWED_DATA_KEYS = ["correlation", "ticket", "type"];
 var TICKET_PATTERN = /^[A-Za-z0-9_-]{43}$/;
 var REAUTH_REQUIRED_BODY = "REAUTH_REQUIRED";
 
+// --- logout診断専用の固定closed allowlist（D4_LOGOUT_*の5つだけ） -------------
+// response bodyがこの5つのexact literalのいずれかに一致したときだけ、
+// state本体（LOGOUT_FAILED）に加えてinfo-displayへそのcodeだけを表示する。
+// csrfToken・cookie値・session ID・token・raw bodyはここでは一切扱わない。
+var LOGOUT_DIAGNOSTIC_CODES = [
+  "D4_LOGOUT_COOKIE_MISSING",
+  "D4_LOGOUT_SESSION_INVALID",
+  "D4_LOGOUT_CSRF_MISMATCH",
+  "D4_LOGOUT_SESSION_READ",
+  "D4_LOGOUT_SESSION_REVOKE"
+];
+var NETWORK_INFO = "NETWORK";
+
 // --- closed vocabulary（状態表示はこの11個のいずれかだけを表示する） -----------
 var STATE = {
   READY: "READY",
@@ -356,19 +369,30 @@ function handleSessionCheckClick() {
 }
 
 // --- E. logout ---------------------------------------------------------------
+// stage診断：state本体は常にLOGOUT_FAILEDのまま。response bodyが5codeのexact
+// allowlistに一致したときだけ、info-displayへそのcodeだけを追加表示する。
+// bodyがempty/unknown（allowlist外）ならinfo-displayは空のまま。
+function showLogoutFailed(diagnosticCode) {
+  setState(STATE.LOGOUT_FAILED);
+  if (typeof diagnosticCode === "string" && LOGOUT_DIAGNOSTIC_CODES.indexOf(diagnosticCode) !== -1) {
+    infoEl.textContent = diagnosticCode;
+  }
+}
+
 function handleLogoutClick() {
   if (flowActive) {
     return; // 進行中のflowがある間はsessionを変更・破棄しない（状態にも触れない）
   }
   if (!csrfToken) {
-    setState(STATE.LOGOUT_FAILED);
+    showLogoutFailed(null);
     return;
   }
   gatewayFetch(LOGOUT_URL, "POST", { "x-gw-csrf": csrfToken })
     .then(function (response) {
       if (response.status !== 200) {
-        setState(STATE.LOGOUT_FAILED);
-        return;
+        return response.text().then(function (bodyText) {
+          showLogoutFailed(bodyText);
+        });
       }
       csrfToken = "";
       return gatewayFetch(SESSION_URL, "GET").then(function (afterLogout) {
@@ -381,6 +405,7 @@ function handleLogoutClick() {
     })
     .catch(function () {
       setState(STATE.LOGOUT_FAILED);
+      infoEl.textContent = NETWORK_INFO;
     });
 }
 
