@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--
+  Work 2/8「Pixel本人認証」2-2D 内部Phase D3：診断専用E2E probe。
+
+  同じGitHub Pages origin (https://memoryreframedlab.github.io) の下に置く、
+  現行ゲーム本体のWeb exportとは独立した1ページ。実Cloudflare Worker gateway /
+  実GitHub App / 実CHIPS partitioned cookieをPixel実機で検証するためだけに存在し、
+  product UI・main sceneには一切接続しない。
+
+  ここで確定済みの公開値（Secretではない）：
+    gateway origin : https://ai-virtual-office-auth-gateway.ai-virtual-office.workers.dev
+    callback       : <gateway origin>/auth/callback
+    Pages origin   : window.location.origin （実行時にそのまま読む。埋め込まない）
+
+  厳格に守ること：
+    ・page loadだけではpopupを開かない（window.openは「本人認証開始」ボタンの
+      click同期コールスタック内、gatewayFetch()内のfetch呼び出し1箇所だけを除き
+      通信は一切しない）
+    ・correlationはbrowser crypto.getRandomValuesだけから生成する
+      （擬似乱数やtimestamp・counterは使わない）
+    ・postMessageは origin / source / type / correlation / 閉じたschema を
+      すべて完全一致で検証してからでなければticket exchangeへ進めない
+    ・診断用2回目exchangeはfail-closed：exact 409のときだけ/auth/sessionへ進み、
+      それ以外のstatusやrequest失敗はcheckSession()を呼ばずclosed failureで止める
+    ・postMessage受理後、exchange/replay gate/session解決が終端状態
+      （成功 or closed failure）に達するまでflowActiveを保ち、二重startを禁止する
+    ・手動「セッション確認」「ログアウト」ボタンはflowActiveがtrueの間は何もしない
+      （checkSession()を呼ばず、sessionを変更・破棄せず、状態・flowActiveにも触れない）。
+      進行中のflowをこの2ボタンが横取りしてflowActiveを解いてはならない
+    ・ticket本文・cookie値・session ID・OAuth token・refresh token・
+      client secretはDOM・console・URL・storageのいずれへも一切出さない
+    ・ブラウザ側の永続/セッション保存領域や、DOMのcookie文字列は一切使わない
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src https://ai-virtual-office-auth-gateway.ai-virtual-office.workers.dev; base-uri 'none'; form-action 'none'; frame-ancestors 'none';">
+<title>D3 probe: Pixel本人認証 CHIPS E2E（診断専用）</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #14100c;
+    color: #f2ece2;
+    font-family: sans-serif;
+  }
+  main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+  button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #6b5c4a;
+    background: #241c14;
+    color: #f2ece2;
+  }
+  button:active {
+    background: #362a1c;
+  }
+  #state-panel {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #6b5c4a;
+    border-radius: 8px;
+    word-break: break-all;
+  }
+  #state-display {
+    font-size: 20px;
+  }
+  #info-display {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #cfc3b2;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>D3 probe（診断専用・仮データではなく実gateway/実GitHub/実CHIPSを使う）</h1>
+  <button id="auth-start-button" type="button">本人認証開始</button>
+  <button id="session-check-button" type="button">セッション確認</button>
+  <button id="logout-button" type="button">ログアウト</button>
+  <div id="state-panel">
+    <div id="state-display">READY</div>
+    <div id="info-display"></div>
+  </div>
+</main>
+<script>
+(function () {
+"use strict";
+
+// --- 固定公開設定（Secretではない） -----------------------------------------
+var GATEWAY_ORIGIN = "https://ai-virtual-office-auth-gateway.ai-virtual-office.workers.dev";
+var AUTH_START_PATH = "/auth/start";
+var EXCHANGE_URL = GATEWAY_ORIGIN + "/auth/handoff/exchange";
+var SESSION_URL = GATEWAY_ORIGIN + "/auth/session";
+var LOGOUT_URL = GATEWAY_ORIGIN + "/auth/logout";
+var MESSAGE_TYPE = "ashuraman.auth.handoff.v1";
+var ALLOWED_DATA_KEYS = ["correlation", "ticket", "type"];
+var TICKET_PATTERN = /^[A-Za-z0-9_-]{43}$/;
+var REAUTH_REQUIRED_BODY = "REAUTH_REQUIRED";
+
+// --- closed vocabulary（状態表示はこの11個のいずれかだけを表示する） -----------
+var STATE = {
+  READY: "READY",
+  AUTH_STARTING: "AUTH_STARTING",
+  AUTHENTICATED: "AUTHENTICATED",
+  POPUP_BLOCKED: "POPUP_BLOCKED",
+  MESSAGE_REJECTED: "MESSAGE_REJECTED",
+  EXCHANGE_FAILED: "EXCHANGE_FAILED",
+  REPLAY_REJECTED: "REPLAY_REJECTED",
+  SESSION_FAILED: "SESSION_FAILED",
+  REAUTH_REQUIRED: "REAUTH_REQUIRED",
+  LOGGED_OUT: "LOGGED_OUT",
+  LOGOUT_FAILED: "LOGOUT_FAILED"
+};
+
+// --- flowごとの一時状態（storageへは一切保存しない。メモリ内だけ） -------------
+var flowActive = false;
+var exactPopupHandle = null;
+var exactCorrelation = "";
+var currentTicket = "";
+var csrfToken = "";
+
+var stateEl = document.getElementById("state-display");
+var infoEl = document.getElementById("info-display");
+var authStartButton = document.getElementById("auth-start-button");
+var sessionCheckButton = document.getElementById("session-check-button");
+var logoutButton = document.getElementById("logout-button");
+
+function setState(code) {
+  stateEl.textContent = code;
+  if (code !== STATE.AUTHENTICATED) {
+    infoEl.textContent = "";
+  }
+}
+
+// --- 終端状態（成功 or closed failure）へ入るときだけflowActiveを解く。 -------
+// 二重start防止のため、accepted messageのあとexchange/replay gate/session解決が
+// 終わるまではflowActiveをtrueのまま保つ（handleMessageではfalseにしない）。
+function endFlow(code) {
+  flowActive = false;
+  setState(code);
+}
+
+// --- 唯一のネットワーク経路。実際のfetch呼び出しはこの関数の中1箇所だけで行う。 ---------
+// credentials:"include"はここで固定するだけで、呼び出し側からは変えられない。
+function gatewayFetch(url, method, headers, body) {
+  var init = { method: method, credentials: "include" };
+  if (headers) { init.headers = headers; }
+  if (body !== undefined) { init.body = body; }
+  return fetch(url, init);
+}
+
+// --- correlation：browser crypto.getRandomValuesだけから生成する ------------
+// 擬似乱数生成やtimestamp、counterは一切使わない。
+function generateCorrelation() {
+  var bytes = new Uint8Array(32);
+  crypto.getRandomValues(bytes);
+  var binary = "";
+  for (var i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  var b64 = btoa(binary);
+  return b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+function isWellFormedTicket(value) {
+  return typeof value === "string" && TICKET_PATTERN.test(value);
+}
+
+// --- A. 認証開始：本人操作のclick同期コールスタック内だけでwindow.openを呼ぶ ---
+function handleAuthStartClick() {
+  if (flowActive) {
+    return; // active flow中の二重開始は禁止
+  }
+  flowActive = true;
+  setState(STATE.AUTH_STARTING);
+
+  var correlation = generateCorrelation();
+  if (correlation.length !== 43) {
+    endFlow(STATE.READY);
+    return;
+  }
+
+  var pagesOrigin = window.location.origin;
+  var returnPath = window.location.pathname;
+  var url = GATEWAY_ORIGIN + AUTH_START_PATH
+    + "?pages_origin=" + encodeURIComponent(pagesOrigin)
+    + "&return_path=" + encodeURIComponent(returnPath)
+    + "&correlation=" + encodeURIComponent(correlation);
+
+  var popup;
+  try {
+    popup = window.open(url, "_blank");
+  } catch (e) {
+    popup = null;
+  }
+  if (!popup) {
+    endFlow(STATE.POPUP_BLOCKED);
+    return;
+  }
+
+  exactPopupHandle = popup;
+  exactCorrelation = correlation;
+}
+
+// --- B. postMessage受信：完全一致検証。不一致はexchangeへ一切進めない。 -------
+function handleMessage(event) {
+  if (!flowActive || exactPopupHandle === null) {
+    return; // 現在activeなflowが無いmessageは無視する（拒否表示もしない）
+  }
+
+  var ok = true;
+  if (event.origin !== GATEWAY_ORIGIN) { ok = false; }
+  if (ok && event.source !== exactPopupHandle) { ok = false; }
+
+  var data = ok ? event.data : null;
+  if (ok && (typeof data !== "object" || data === null)) { ok = false; }
+  if (ok && data.type !== MESSAGE_TYPE) { ok = false; }
+  if (ok && data.correlation !== exactCorrelation) { ok = false; }
+
+  if (ok) {
+    var keys = Object.keys(data).slice().sort();
+    if (keys.length !== ALLOWED_DATA_KEYS.length || keys.join(",") !== ALLOWED_DATA_KEYS.join(",")) {
+      ok = false;
+    }
+  }
+
+  var ticket = ok ? data.ticket : null;
+  if (ok && !isWellFormedTicket(ticket)) { ok = false; }
+
+  // 受理・拒否のいずれでも、このflowのexact popup handle/correlationは一度きり。
+  exactPopupHandle = null;
+  exactCorrelation = "";
+
+  if (!ok) {
+    // 拒否したmessageはここでflowを閉じてよい（二重startを許してよい）。
+    endFlow(STATE.MESSAGE_REJECTED);
+    return;
+  }
+
+  // 受理した場合はflowActiveをtrueのまま保つ。exchange/replay gate/session解決の
+  // 終端状態（成功 or closed failure）に達するまで、二重startを禁止し続ける。
+  currentTicket = ticket;
+  ticket = null;
+  beginExchange();
+}
+
+// --- C. ticket exchange / session ------------------------------------------
+function beginExchange() {
+  gatewayFetch(EXCHANGE_URL, "POST", { "Content-Type": "application/json" },
+      JSON.stringify({ ticket: currentTicket }))
+    .then(function (response) {
+      if (response.status !== 200) {
+        currentTicket = "";
+        endFlow(STATE.EXCHANGE_FAILED);
+        return;
+      }
+      // 診断用：同じticketで2回目のexchangeを1回だけ行い、409 replay拒否を確認する。
+      // これはfail-closedなhard gate：exact 409のときだけcheckSession()へ進む。
+      // 409以外のstatus、またはrequest失敗（catch）はここでclosed failureとして
+      // 止め、checkSession()は呼ばない。
+      gatewayFetch(EXCHANGE_URL, "POST", { "Content-Type": "application/json" },
+          JSON.stringify({ ticket: currentTicket }))
+        .then(function (replayResponse) {
+          currentTicket = "";
+          if (replayResponse.status === 409) {
+            setState(STATE.REPLAY_REJECTED);
+            checkSession();
+            return;
+          }
+          endFlow(STATE.EXCHANGE_FAILED);
+        })
+        .catch(function () {
+          currentTicket = "";
+          endFlow(STATE.EXCHANGE_FAILED);
+        });
+    })
+    .catch(function () {
+      currentTicket = "";
+      endFlow(STATE.EXCHANGE_FAILED);
+    });
+}
+
+// --- D. セッション確認（ticket無し。reload後もこのボタンから呼べる） -----------
+function checkSession() {
+  return gatewayFetch(SESSION_URL, "GET")
+    .then(function (response) {
+      return response.text().then(function (bodyText) {
+        if (response.status === 401 && bodyText === REAUTH_REQUIRED_BODY) {
+          // F. REAUTH_REQUIRED：closed stateとして表示するだけ。自動で再開始しない。
+          csrfToken = "";
+          endFlow(STATE.REAUTH_REQUIRED);
+          return;
+        }
+        if (response.status !== 200) {
+          endFlow(STATE.SESSION_FAILED);
+          return;
+        }
+        var parsed = null;
+        try {
+          parsed = JSON.parse(bodyText);
+        } catch (e) {
+          parsed = null;
+        }
+        if (!parsed || parsed.code !== "AUTHENTICATED" || typeof parsed.login !== "string") {
+          endFlow(STATE.SESSION_FAILED);
+          return;
+        }
+        csrfToken = typeof parsed.csrfToken === "string" ? parsed.csrfToken : "";
+        renderAuthenticated(parsed);
+        endFlow(STATE.AUTHENTICATED);
+      });
+    })
+    .catch(function () {
+      endFlow(STATE.SESSION_FAILED);
+    });
+}
+
+// 表示してよいのは closed code / login / installationId / expiry だけ。
+// cookie値・session ID・OAuth token・refresh token・client secretはここで読まない。
+function renderAuthenticated(parsed) {
+  var expiry = parsed.sessionExpiresAtMs;
+  infoEl.textContent = "code=" + parsed.code
+    + " login=" + parsed.login
+    + " installationId=" + parsed.installationId
+    + " expiry=" + expiry;
+}
+
+// 手動「セッション確認」はflowActive中は一切行わない。checkSession()はendFlow()経由で
+// flowActiveをfalseにするため、accepted messageのあとexchange/replay gate/session解決が
+// まだ終端していないflowをここから横取りしてflowActiveを解いてはならない
+// （解いてしまうと、その終端前に二重startのpopupを開けてしまう）。
+function handleSessionCheckClick() {
+  if (flowActive) {
+    return; // 進行中のflowの状態・flowActiveには一切触れない
+  }
+  checkSession();
+}
+
+// --- E. logout ---------------------------------------------------------------
+function handleLogoutClick() {
+  if (flowActive) {
+    return; // 進行中のflowがある間はsessionを変更・破棄しない（状態にも触れない）
+  }
+  if (!csrfToken) {
+    setState(STATE.LOGOUT_FAILED);
+    return;
+  }
+  gatewayFetch(LOGOUT_URL, "POST", { "x-gw-csrf": csrfToken })
+    .then(function (response) {
+      if (response.status !== 200) {
+        setState(STATE.LOGOUT_FAILED);
+        return;
+      }
+      csrfToken = "";
+      return gatewayFetch(SESSION_URL, "GET").then(function (afterLogout) {
+        if (afterLogout.status === 200) {
+          setState(STATE.LOGOUT_FAILED);
+          return;
+        }
+        setState(STATE.LOGGED_OUT);
+      });
+    })
+    .catch(function () {
+      setState(STATE.LOGOUT_FAILED);
+    });
+}
+
+authStartButton.addEventListener("click", handleAuthStartClick);
+sessionCheckButton.addEventListener("click", handleSessionCheckClick);
+logoutButton.addEventListener("click", handleLogoutClick);
+window.addEventListener("message", handleMessage);
+})();
+</script>
+</body>
+</html>
