@@ -1,32 +1,47 @@
 {
-	"record": {
-		"active_role_states": {
-
-		},
-		"ai_can_continue": false,
-		"attempt": 12,
-		"current_phase": "実装",
-		"execution_state": "TERMINAL",
-		"generation": 10,
-		"issue_number": 1,
-		"issue_url": "issue-ref:memoryreframedlab-ai/ai-virtual-office#1",
-		"judgment_event_id": "",
-		"progress_ratio": 0.0,
-		"project_id": "ai-virtual-office",
-		"receipt_id": "88d8905df03c408f82bdb03c065adab0",
-		"repository_full_name": "memoryreframedlab-ai/ai-virtual-office",
-		"repository_id": "R_kgDOUh1Rfw",
-		"request_id": "b8a137791c9941e4dd637de00872075d",
-		"resolution_state": "UNKNOWN_BLOCKED",
-		"run_id": "35550865312",
-		"safe_reason_code": "",
-		"safe_reason_text": "",
-		"seq": 117,
-		"source_kind": "github_ashuraman",
-		"source_updated_at": 1789954692,
-		"state_code": "completed",
-		"user_action_required": false,
-		"workspace_digest": "88c4c3c44f5b0d0498a1423f29f523ea5aa73bd9318ddcd099e6cd94f3fe7f33"
-	},
-	"schema_version": 1
+  "schema_version": 2,
+  "records": [
+    {
+      "slot_id": "primary",
+      "project_id": "r1-hidamari",
+      "project_display_name": "模擬制作：ひだまり文具",
+      "current_phase": "ソース納品完了",
+      "raw_state_code": "completed",
+      "execution_state": "TERMINAL",
+      "resolution_state": "COMPLETED",
+      "display_state": "完了",
+      "progress_known": false,
+      "progress_ratio": 0,
+      "assignee_display_name": "統括（ソース納品）",
+      "assignee_role_state": {},
+      "judgment_waiting": false,
+      "judgment_owner": "none",
+      "blocker_kind": "",
+      "source_updated_at": 1791142399,
+      "pc_dependency_known": false,
+      "pc_dependency": false,
+      "completion_evidence_id": "3e62c1eff86264be72a7879fa4588d5fdb7b4049995cf89dced01a21c44b9fac"
+    },
+    {
+      "slot_id": "slot2",
+      "project_id": "r1-practical-office",
+      "project_display_name": "R1実用版・全体（4条件）",
+      "current_phase": "公開表示の切替・照合待ち（承認済み）",
+      "raw_state_code": "",
+      "execution_state": "TERMINAL",
+      "resolution_state": "PENDING",
+      "display_state": "未確認",
+      "progress_known": true,
+      "progress_ratio": 0.75,
+      "assignee_display_name": "統括（表示接続）",
+      "assignee_role_state": {},
+      "judgment_waiting": false,
+      "judgment_owner": "none",
+      "blocker_kind": "",
+      "source_updated_at": 1791144567,
+      "pc_dependency_known": false,
+      "pc_dependency": false,
+      "completion_evidence_id": ""
+    }
+  ]
 }
