@@ -42,6 +42,27 @@
       "pc_dependency_known": true,
       "pc_dependency": false,
       "completion_evidence_id": "ecb0bffe58d28f602e8798c069b3bb32e1b266c3225071cc858f01c1a0955609"
+    },
+    {
+      "slot_id": "slot3",
+      "project_id": "yaohachi-banana-lp",
+      "project_display_name": "模擬制作：八百八のバナナLP",
+      "current_phase": "実装・検証完了／候補PR公開許可待ち",
+      "raw_state_code": "waiting_user",
+      "execution_state": "TERMINAL",
+      "resolution_state": "USER_ACTION_REQUIRED",
+      "display_state": "未確認",
+      "progress_known": false,
+      "progress_ratio": 0,
+      "assignee_display_name": "統括（八百八）",
+      "assignee_role_state": {},
+      "judgment_waiting": true,
+      "judgment_owner": "self",
+      "blocker_kind": "",
+      "source_updated_at": 1791180985,
+      "pc_dependency_known": true,
+      "pc_dependency": false,
+      "completion_evidence_id": ""
     }
   ]
 }
