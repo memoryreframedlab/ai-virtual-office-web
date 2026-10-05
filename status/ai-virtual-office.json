@@ -26,22 +26,22 @@
       "slot_id": "slot2",
       "project_id": "r1-practical-office",
       "project_display_name": "R1実用版・全体（4条件）",
-      "current_phase": "Pixel照合合格・R1最終受入待ち",
-      "raw_state_code": "needs_human",
+      "current_phase": "R1初期実用版・本人最終受入完了",
+      "raw_state_code": "completed",
       "execution_state": "TERMINAL",
-      "resolution_state": "USER_ACTION_REQUIRED",
-      "display_state": "本人判断待ち",
+      "resolution_state": "COMPLETED",
+      "display_state": "完了",
       "progress_known": true,
-      "progress_ratio": 0.75,
-      "assignee_display_name": "統括（最終受入）",
+      "progress_ratio": 1,
+      "assignee_display_name": "統括（初期実用版完了）",
       "assignee_role_state": {},
-      "judgment_waiting": true,
-      "judgment_owner": "self",
+      "judgment_waiting": false,
+      "judgment_owner": "none",
       "blocker_kind": "",
-      "source_updated_at": 1791166021,
-      "pc_dependency_known": false,
+      "source_updated_at": 1791166944,
+      "pc_dependency_known": true,
       "pc_dependency": false,
-      "completion_evidence_id": ""
+      "completion_evidence_id": "ecb0bffe58d28f602e8798c069b3bb32e1b266c3225071cc858f01c1a0955609"
     }
   ]
 }
