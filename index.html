@@ -93,7 +93,14 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <meta name="robots" content="noindex,nofollow">
-<script src="notification_bridge.js"></script>
+		<script>
+// Only this exact, single optional flag enters the isolated native diagnostic.
+const OFFICE_PERMISSION_PROBE_VALUES = new URLSearchParams(window.location.search).getAll('notification_permission_probe');
+const OFFICE_PERMISSION_PROBE = OFFICE_PERMISSION_PROBE_VALUES.length === 1 && OFFICE_PERMISSION_PROBE_VALUES[0] === '1';
+if (!OFFICE_PERMISSION_PROBE) {
+	document.write('<script src="notification_bridge.js"><\/script>');
+}
+		</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -110,8 +117,22 @@ body {
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="index.js"></script>
 		<script>
+if (OFFICE_PERMISSION_PROBE) {
+	document.body.style.cssText = 'color:#30271f;background:#fbf5e6;margin:0;padding:20px;font:16px sans-serif;overflow:auto;touch-action:auto';
+	document.body.textContent = '通知許可の診断を読み込んでいます…';
+	const diagnosticScript = document.createElement('script');
+	diagnosticScript.src = 'notification_permission_diagnostic.js';
+	diagnosticScript.onerror = function () {
+		document.body.textContent = '診断を読み込めませんでした。許可要求は行っていません。';
+	};
+	document.head.appendChild(diagnosticScript);
+} else {
+	document.write('<script src="index.js"><\/script>');
+}
+		</script>
+		<script>
+if (!OFFICE_PERMISSION_PROBE) {
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":10846232,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
@@ -215,6 +236,7 @@ const engine = new Engine(GODOT_CONFIG);
 		}, displayFailureNotice);
 	}
 }());
+}
 		</script>
 	</body>
 </html>
