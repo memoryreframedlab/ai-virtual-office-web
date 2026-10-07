@@ -34,7 +34,7 @@
 			"current_phase": "統括：スマホ確認待ち",
 			"display_state": "未確認",
 			"execution_state": "TERMINAL",
-			"judgment_event_id": "j1_291ae130c6ae1870eb472b126a867fb358754e61a67575707500355b5db1d586",
+			"judgment_event_id": "j1_25f806a5b0509bcd87a8045882d12effaf3aad1bf148260c49bf69eae8554d52",
 			"judgment_owner": "self",
 			"judgment_waiting": true,
 			"pc_dependency": false,
@@ -46,7 +46,7 @@
 			"raw_state_code": "needs_human",
 			"resolution_state": "USER_ACTION_REQUIRED",
 			"slot_id": "slot2",
-			"source_updated_at": 1791411080
+			"source_updated_at": 1791413489
 		},
 		{
 			"assignee_display_name": "統括（八百八）",
