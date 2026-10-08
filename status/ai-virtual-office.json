@@ -49,28 +49,28 @@
 			"source_updated_at": 1791421873.0
 		},
 		{
-			"assignee_display_name": "統括（八百八）",
+			"assignee_display_name": "ブギー（統括）",
 			"assignee_role_state": {
 
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "実装・検証完了／候補PR公開許可待ち",
+			"current_phase": "統括：成果保管・制作保留",
 			"display_state": "未確認",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
-			"judgment_owner": "self",
-			"judgment_waiting": true,
+			"judgment_owner": "none",
+			"judgment_waiting": false,
 			"pc_dependency": false,
-			"pc_dependency_known": true,
+			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
 			"project_display_name": "模擬制作：八百八のバナナLP",
 			"project_id": "yaohachi-banana-lp",
-			"raw_state_code": "waiting_user",
-			"resolution_state": "USER_ACTION_REQUIRED",
+			"raw_state_code": "held",
+			"resolution_state": "PENDING",
 			"slot_id": "slot3",
-			"source_updated_at": 1791180985.0
+			"source_updated_at": 1791429264
 		}
 	],
 	"roles": {
@@ -80,7 +80,7 @@
 				"assignment_key": "8f0fbdcc90c7ea4dc9814191998ff70ec34a9876a16af3577c38825af2d6afda",
 				"assignment_state": "ASSIGNED",
 				"display_name": "ブギー",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-blackboard",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -91,7 +91,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-blackboard",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -102,7 +102,7 @@
 				"assignment_key": "384a1fde26386cb4ecd1ecd4e36a97c53bec0de59d5cd714d0785cb77f1587b1",
 				"assignment_state": "ASSIGNED",
 				"display_name": "表示実装担当",
-				"observed_at": 1791423663,
+				"observed_at": 1791423663.0,
 				"project_id": "office-people-display",
 				"role": "work",
 				"run_state": "RUNNING",
@@ -113,20 +113,20 @@
 				"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
 				"assignment_state": "PLANNED",
 				"display_name": "Claude Code",
-				"observed_at": 1791423663,
+				"observed_at": 1791423663.0,
 				"project_id": "office-people-display",
 				"role": "claude_code",
 				"run_state": "NOT_STARTED",
 				"slot_id": "slot2"
 			}
 		],
-		"revision": 1,
-		"schema_version": 1,
+		"revision": 1.0,
+		"schema_version": 1.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1791423737
+		"updated_at": 1791423737.0
 	},
 	"schema_version": 4
 }
