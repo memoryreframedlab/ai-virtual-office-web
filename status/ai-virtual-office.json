@@ -142,13 +142,13 @@
 			"slot_id": "slot3"
 		}
 	],
-	"revision": 10,
+	"revision": 11,
 	"schema_version": 2,
 	"secretary_binding": {
 		"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 		"display_name": "ブギー"
 	},
-	"updated_at": 1791540469
+	"updated_at": 1791541794
 },
 	"schema_version": 5,
 	"usage": {
