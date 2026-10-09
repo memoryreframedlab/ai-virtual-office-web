@@ -80,7 +80,7 @@
 				"assignment_key": "2eb6ed6fc2846768e6c1b876a0f97d9139b484511f11604cd76192e12f14b4ea",
 				"assignment_state": "ASSIGNED",
 				"display_name": "黒板調査担当",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-blackboard",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -91,7 +91,7 @@
 				"assignment_key": "6db26e67ad1b8a67bf0faeba28222275db05e6f21fb312fcce8a0c38e5bb2f28",
 				"assignment_state": "PLANNED",
 				"display_name": "Claude Code",
-				"observed_at": 1791435795,
+				"observed_at": 1791435795.0,
 				"project_id": "office-blackboard",
 				"role": "claude_code",
 				"run_state": "NOT_STARTED",
@@ -102,7 +102,7 @@
 				"assignment_key": "384a1fde26386cb4ecd1ecd4e36a97c53bec0de59d5cd714d0785cb77f1587b1",
 				"assignment_state": "ASSIGNED",
 				"display_name": "表示実装担当",
-				"observed_at": 1791423663,
+				"observed_at": 1791423663.0,
 				"project_id": "office-people-display",
 				"role": "work",
 				"run_state": "RUNNING",
@@ -113,7 +113,7 @@
 				"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
 				"assignment_state": "PLANNED",
 				"display_name": "Claude Code",
-				"observed_at": 1791423663,
+				"observed_at": 1791423663.0,
 				"project_id": "office-people-display",
 				"role": "claude_code",
 				"run_state": "NOT_STARTED",
@@ -124,7 +124,7 @@
 				"assignment_key": "f510549894f80a401ec692bd1ecc28bed6a1fe0ea8787bb247023380a6dc4b4d",
 				"assignment_state": "PLANNED",
 				"display_name": "WORK",
-				"observed_at": 1791435795,
+				"observed_at": 1791435795.0,
 				"project_id": "yaohachi-banana-lp",
 				"role": "work",
 				"run_state": "NOT_STARTED",
@@ -135,29 +135,29 @@
 				"assignment_key": "cda3901d46b3df56002c233694de5228e1afe61304eeedcd97cb1b0f91b5b7ed",
 				"assignment_state": "PLANNED",
 				"display_name": "Claude Code",
-				"observed_at": 1791435795,
+				"observed_at": 1791435795.0,
 				"project_id": "yaohachi-banana-lp",
 				"role": "claude_code",
 				"run_state": "NOT_STARTED",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 2,
-		"schema_version": 1,
+		"revision": 2.0,
+		"schema_version": 1.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1791435795
+		"updated_at": 1791435795.0
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1791496206,
+		"observed_at": 1791517943,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 92.0,
+				"percent": 91.0,
 				"period": "weekly"
 			},
 			{
@@ -170,7 +170,7 @@
 				"basis": "used",
 				"id": "claude_session",
 				"not_started": false,
-				"percent": 3.0,
+				"percent": 1.0,
 				"period": "current_session"
 			}
 		]
