@@ -74,82 +74,82 @@
 		}
 	],
 	"roles": {
-		"assignments": [
-			{
-				"actor_key": "041bdda0dd21031f1c642048acc61f35e89e395fd762d4c09447a1b404fd1862",
-				"assignment_key": "0c8d2f233230c7306dc25984d65f0e2ea21b1cf7f341b75ae23714d683d61d85",
-				"assignment_state": "ASSIGNED",
-				"display_name": "LINEスタンプ担当",
-				"observed_at": 0.0,
-				"project_id": "showa-schoolkids-line-stickers",
-				"role": "work",
-				"run_state": "UNKNOWN",
-				"slot_id": "primary"
-			},
-			{
-				"actor_key": "",
-				"assignment_key": "",
-				"assignment_state": "UNASSIGNED",
-				"display_name": "",
-				"observed_at": 0.0,
-				"project_id": "showa-schoolkids-line-stickers",
-				"role": "claude_code",
-				"run_state": "UNKNOWN",
-				"slot_id": "primary"
-			},
-			{
-				"actor_key": "245d4ee4f4109b2b10ab7f99b4e0c1fc70848e007e0fb7f16c3a9e06651caf0d",
-				"assignment_key": "0520a6a3ccdd60663137e4c70903ea11e4455c7222937a999dcca8045359b5a5",
-				"assignment_state": "ASSIGNED",
-				"display_name": "表示実装担当",
-				"observed_at": 0.0,
-				"project_id": "office-people-display",
-				"role": "work",
-				"run_state": "UNKNOWN",
-				"slot_id": "slot2"
-			},
-			{
-				"actor_key": "",
-				"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
-				"assignment_state": "PLANNED",
-				"display_name": "Claude Code",
-				"observed_at": 1791423663.0,
-				"project_id": "office-people-display",
-				"role": "claude_code",
-				"run_state": "NOT_STARTED",
-				"slot_id": "slot2"
-			},
-			{
-				"actor_key": "",
-				"assignment_key": "",
-				"assignment_state": "UNASSIGNED",
-				"display_name": "",
-				"observed_at": 0.0,
-				"project_id": "yaohachi-banana-lp",
-				"role": "work",
-				"run_state": "UNKNOWN",
-				"slot_id": "slot3"
-			},
-			{
-				"actor_key": "",
-				"assignment_key": "",
-				"assignment_state": "UNASSIGNED",
-				"display_name": "",
-				"observed_at": 0.0,
-				"project_id": "yaohachi-banana-lp",
-				"role": "claude_code",
-				"run_state": "UNKNOWN",
-				"slot_id": "slot3"
-			}
-		],
-		"revision": 6.0,
-		"schema_version": 2.0,
-		"secretary_binding": {
-			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
-			"display_name": "ブギー"
+	"assignments": [
+		{
+			"actor_key": "041bdda0dd21031f1c642048acc61f35e89e395fd762d4c09447a1b404fd1862",
+			"assignment_key": "0c8d2f233230c7306dc25984d65f0e2ea21b1cf7f341b75ae23714d683d61d85",
+			"assignment_state": "ASSIGNED",
+			"display_name": "LINEスタンプ担当",
+			"observed_at": 0,
+			"project_id": "showa-schoolkids-line-stickers",
+			"role": "work",
+			"run_state": "UNKNOWN",
+			"slot_id": "primary"
 		},
-		"updated_at": 1791530375.0
+		{
+			"actor_key": "",
+			"assignment_key": "",
+			"assignment_state": "UNASSIGNED",
+			"display_name": "",
+			"observed_at": 0,
+			"project_id": "showa-schoolkids-line-stickers",
+			"role": "claude_code",
+			"run_state": "UNKNOWN",
+			"slot_id": "primary"
+		},
+		{
+			"actor_key": "245d4ee4f4109b2b10ab7f99b4e0c1fc70848e007e0fb7f16c3a9e06651caf0d",
+			"assignment_key": "0520a6a3ccdd60663137e4c70903ea11e4455c7222937a999dcca8045359b5a5",
+			"assignment_state": "ASSIGNED",
+			"display_name": "表示実装担当",
+			"observed_at": 1791531005,
+			"project_id": "office-people-display",
+			"role": "work",
+			"run_state": "REVIEWING",
+			"slot_id": "slot2"
+		},
+		{
+			"actor_key": "",
+			"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
+			"assignment_state": "PLANNED",
+			"display_name": "Claude Code",
+			"observed_at": 1791423663,
+			"project_id": "office-people-display",
+			"role": "claude_code",
+			"run_state": "NOT_STARTED",
+			"slot_id": "slot2"
+		},
+		{
+			"actor_key": "",
+			"assignment_key": "",
+			"assignment_state": "UNASSIGNED",
+			"display_name": "",
+			"observed_at": 0,
+			"project_id": "yaohachi-banana-lp",
+			"role": "work",
+			"run_state": "UNKNOWN",
+			"slot_id": "slot3"
+		},
+		{
+			"actor_key": "",
+			"assignment_key": "",
+			"assignment_state": "UNASSIGNED",
+			"display_name": "",
+			"observed_at": 0,
+			"project_id": "yaohachi-banana-lp",
+			"role": "claude_code",
+			"run_state": "UNKNOWN",
+			"slot_id": "slot3"
+		}
+	],
+	"revision": 7,
+	"schema_version": 2,
+	"secretary_binding": {
+		"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
+		"display_name": "ブギー"
 	},
+	"updated_at": 1791531077
+},
 	"schema_version": 5,
 	"usage": {
 		"observed_at": 1791517943.0,
