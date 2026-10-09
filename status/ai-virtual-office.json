@@ -102,10 +102,10 @@
 			"assignment_key": "0520a6a3ccdd60663137e4c70903ea11e4455c7222937a999dcca8045359b5a5",
 			"assignment_state": "ASSIGNED",
 			"display_name": "表示実装担当",
-			"observed_at": 1791531199,
+			"observed_at": 0,
 			"project_id": "office-people-display",
 			"role": "work",
-			"run_state": "COMPLETE_CHECK",
+			"run_state": "UNKNOWN",
 			"slot_id": "slot2"
 		},
 		{
@@ -142,13 +142,13 @@
 			"slot_id": "slot3"
 		}
 	],
-	"revision": 8,
+	"revision": 9,
 	"schema_version": 2,
 	"secretary_binding": {
 		"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 		"display_name": "ブギー"
 	},
-	"updated_at": 1791531297
+	"updated_at": 1791538085
 },
 	"schema_version": 5,
 	"usage": {
