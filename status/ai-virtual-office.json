@@ -5,10 +5,10 @@
 			"assignee_role_state": {
 
 			},
-			"blocker_kind": "verification",
+			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：停止中",
-			"display_state": "安全停止",
+			"current_phase": "統括：円卓から解除・成果保管",
+			"display_state": "未確認",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
@@ -19,10 +19,10 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "黒板",
 			"project_id": "office-blackboard",
-			"raw_state_code": "failed",
-			"resolution_state": "UNKNOWN_BLOCKED",
+			"raw_state_code": "retired",
+			"resolution_state": "PENDING",
 			"slot_id": "primary",
-			"source_updated_at": 1791421316.0
+			"source_updated_at": 1791497460
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -55,7 +55,7 @@
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：成果保管・制作保留",
+			"current_phase": "統括：円卓から解除・成果保管",
 			"display_state": "未確認",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
@@ -67,92 +67,92 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "模擬制作：八百八のバナナLP",
 			"project_id": "yaohachi-banana-lp",
-			"raw_state_code": "held",
+			"raw_state_code": "retired",
 			"resolution_state": "PENDING",
 			"slot_id": "slot3",
-			"source_updated_at": 1791429264.0
+			"source_updated_at": 1791497361
 		}
 	],
 	"roles": {
-	"assignments": [
-		{
-			"actor_key": "37acf4cc32856895fd0ca0c3da52ee6fa121ce9c84a71144706d5db1aa87fca3",
-			"assignment_key": "2eb6ed6fc2846768e6c1b876a0f97d9139b484511f11604cd76192e12f14b4ea",
-			"assignment_state": "ASSIGNED",
-			"display_name": "黒板調査担当",
-			"observed_at": 0,
-			"project_id": "office-blackboard",
-			"role": "work",
-			"run_state": "UNKNOWN",
-			"slot_id": "primary"
+		"assignments": [
+			{
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
+				"observed_at": 0,
+				"project_id": "office-blackboard",
+				"role": "work",
+				"run_state": "UNKNOWN",
+				"slot_id": "primary"
+			},
+			{
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
+				"observed_at": 0,
+				"project_id": "office-blackboard",
+				"role": "claude_code",
+				"run_state": "UNKNOWN",
+				"slot_id": "primary"
+			},
+			{
+				"actor_key": "245d4ee4f4109b2b10ab7f99b4e0c1fc70848e007e0fb7f16c3a9e06651caf0d",
+				"assignment_key": "0520a6a3ccdd60663137e4c70903ea11e4455c7222937a999dcca8045359b5a5",
+				"assignment_state": "ASSIGNED",
+				"display_name": "表示実装担当",
+				"observed_at": 0,
+				"project_id": "office-people-display",
+				"role": "work",
+				"run_state": "UNKNOWN",
+				"slot_id": "slot2"
+			},
+			{
+				"actor_key": "",
+				"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
+				"assignment_state": "PLANNED",
+				"display_name": "Claude Code",
+				"observed_at": 1791423663,
+				"project_id": "office-people-display",
+				"role": "claude_code",
+				"run_state": "NOT_STARTED",
+				"slot_id": "slot2"
+			},
+			{
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
+				"observed_at": 0,
+				"project_id": "yaohachi-banana-lp",
+				"role": "work",
+				"run_state": "UNKNOWN",
+				"slot_id": "slot3"
+			},
+			{
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
+				"observed_at": 0,
+				"project_id": "yaohachi-banana-lp",
+				"role": "claude_code",
+				"run_state": "UNKNOWN",
+				"slot_id": "slot3"
+			}
+		],
+		"revision": 5,
+		"schema_version": 2,
+		"secretary_binding": {
+			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
+			"display_name": "ブギー"
 		},
-		{
-			"actor_key": "",
-			"assignment_key": "6db26e67ad1b8a67bf0faeba28222275db05e6f21fb312fcce8a0c38e5bb2f28",
-			"assignment_state": "PLANNED",
-			"display_name": "Claude Code",
-			"observed_at": 1791435795,
-			"project_id": "office-blackboard",
-			"role": "claude_code",
-			"run_state": "NOT_STARTED",
-			"slot_id": "primary"
-		},
-		{
-			"actor_key": "245d4ee4f4109b2b10ab7f99b4e0c1fc70848e007e0fb7f16c3a9e06651caf0d",
-			"assignment_key": "0520a6a3ccdd60663137e4c70903ea11e4455c7222937a999dcca8045359b5a5",
-			"assignment_state": "ASSIGNED",
-			"display_name": "表示実装担当",
-			"observed_at": 0,
-			"project_id": "office-people-display",
-			"role": "work",
-			"run_state": "UNKNOWN",
-			"slot_id": "slot2"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
-			"assignment_state": "PLANNED",
-			"display_name": "Claude Code",
-			"observed_at": 1791423663,
-			"project_id": "office-people-display",
-			"role": "claude_code",
-			"run_state": "NOT_STARTED",
-			"slot_id": "slot2"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "f510549894f80a401ec692bd1ecc28bed6a1fe0ea8787bb247023380a6dc4b4d",
-			"assignment_state": "PLANNED",
-			"display_name": "WORK",
-			"observed_at": 1791435795,
-			"project_id": "yaohachi-banana-lp",
-			"role": "work",
-			"run_state": "NOT_STARTED",
-			"slot_id": "slot3"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "cda3901d46b3df56002c233694de5228e1afe61304eeedcd97cb1b0f91b5b7ed",
-			"assignment_state": "PLANNED",
-			"display_name": "Claude Code",
-			"observed_at": 1791435795,
-			"project_id": "yaohachi-banana-lp",
-			"role": "claude_code",
-			"run_state": "NOT_STARTED",
-			"slot_id": "slot3"
-		}
-	],
-	"revision": 4,
-	"schema_version": 2,
-	"secretary_binding": {
-		"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
-		"display_name": "ブギー"
+		"updated_at": 1791530120
 	},
-	"updated_at": 1791529283
-},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1791517943,
+		"observed_at": 1791517943.0,
 		"records": [
 			{
 				"basis": "remaining",
