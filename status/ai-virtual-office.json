@@ -152,27 +152,27 @@
 },
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1791517943.0,
-		"records": [
-			{
-				"basis": "remaining",
-				"id": "chatgpt_agent_weekly",
-				"percent": 91.0,
-				"period": "weekly"
-			},
-			{
-				"basis": "used",
-				"id": "claude_all_weekly",
-				"percent": 18.0,
-				"period": "weekly"
-			},
-			{
-				"basis": "used",
-				"id": "claude_session",
-				"not_started": false,
-				"percent": 1.0,
-				"period": "current_session"
-			}
-		]
-	}
+	"observed_at": 1791539430,
+	"records": [
+		{
+			"basis": "remaining",
+			"id": "chatgpt_agent_weekly",
+			"percent": 90.0,
+			"period": "weekly"
+		},
+		{
+			"basis": "used",
+			"id": "claude_all_weekly",
+			"percent": 18.0,
+			"period": "weekly"
+		},
+		{
+			"basis": "used",
+			"id": "claude_session",
+			"not_started": true,
+			"percent": 0.0,
+			"period": "current_session"
+		}
+	]
+}
 }
