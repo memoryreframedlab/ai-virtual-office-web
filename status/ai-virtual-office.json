@@ -1,184 +1,177 @@
 {
-	"records": [
-		{
-			"assignee_display_name": "ブギー（統括）",
-			"assignee_role_state": {
-
-			},
-			"blocker_kind": "",
-			"completion_evidence_id": "",
-			"current_phase": "統括：成果保管・制作保留",
-			"display_state": "未確認",
-			"execution_state": "TERMINAL",
-			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
-			"pc_dependency": false,
-			"pc_dependency_known": false,
-			"progress_known": false,
-			"progress_ratio": 0.0,
-			"project_display_name": "昭和の小学生・LINEスタンプ",
-			"project_id": "showa-schoolkids-line-stickers",
-			"raw_state_code": "held",
-			"resolution_state": "PENDING",
-			"slot_id": "primary",
-			"source_updated_at": 1791529461
-		},
-		{
-			"assignee_display_name": "ブギー（統括）",
-			"assignee_role_state": {
-
-			},
-			"blocker_kind": "",
-			"completion_evidence_id": "",
-			"current_phase": "統括：検証中",
-			"display_state": "固定検証中",
-			"execution_state": "RUNNING",
-			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
-			"pc_dependency": false,
-			"pc_dependency_known": false,
-			"progress_known": false,
-			"progress_ratio": 0.0,
-			"project_display_name": "人の表示",
-			"project_id": "office-people-display",
-			"raw_state_code": "verifying",
-			"resolution_state": "PENDING",
-			"slot_id": "slot2",
-			"source_updated_at": 1791421873.0
-		},
-		{
-			"assignee_display_name": "ブギー（統括）",
-			"assignee_role_state": {
-
-			},
-			"blocker_kind": "",
-			"completion_evidence_id": "",
-			"current_phase": "統括：円卓から解除・成果保管",
-			"display_state": "未確認",
-			"execution_state": "TERMINAL",
-			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
-			"pc_dependency": false,
-			"pc_dependency_known": false,
-			"progress_known": false,
-			"progress_ratio": 0.0,
-			"project_display_name": "模擬制作：八百八のバナナLP",
-			"project_id": "yaohachi-banana-lp",
-			"raw_state_code": "retired",
-			"resolution_state": "PENDING",
-			"slot_id": "slot3",
-			"source_updated_at": 1791497361.0
-		}
-	],
-	"roles": {
-	"assignments": [
-		{
-			"actor_key": "041bdda0dd21031f1c642048acc61f35e89e395fd762d4c09447a1b404fd1862",
-			"assignment_key": "0c8d2f233230c7306dc25984d65f0e2ea21b1cf7f341b75ae23714d683d61d85",
-			"assignment_state": "ASSIGNED",
-			"display_name": "LINEスタンプ担当",
-			"observed_at": 0,
-			"project_id": "showa-schoolkids-line-stickers",
-			"role": "work",
-			"run_state": "UNKNOWN",
-			"slot_id": "primary"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "",
-			"assignment_state": "UNASSIGNED",
-			"display_name": "",
-			"observed_at": 0,
-			"project_id": "showa-schoolkids-line-stickers",
-			"role": "claude_code",
-			"run_state": "UNKNOWN",
-			"slot_id": "primary"
-		},
-		{
-			"actor_key": "245d4ee4f4109b2b10ab7f99b4e0c1fc70848e007e0fb7f16c3a9e06651caf0d",
-			"assignment_key": "0bc95d34c6427544b9d7ef77d48051f6128457f0e515088cd3576ceaa634a35d",
-			"assignment_state": "ASSIGNED",
-			"display_name": "表示実装担当",
-			"observed_at": 1791580356,
-			"project_id": "office-people-display",
-			"role": "work",
-			"run_state": "COMPLETE_CHECK",
-			"slot_id": "slot2"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
-			"assignment_state": "PLANNED",
-			"display_name": "Claude Code",
-			"observed_at": 1791423663,
-			"project_id": "office-people-display",
-			"role": "claude_code",
-			"run_state": "NOT_STARTED",
-			"slot_id": "slot2"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "",
-			"assignment_state": "UNASSIGNED",
-			"display_name": "",
-			"observed_at": 0,
-			"project_id": "yaohachi-banana-lp",
-			"role": "work",
-			"run_state": "UNKNOWN",
-			"slot_id": "slot3"
-		},
-		{
-			"actor_key": "",
-			"assignment_key": "",
-			"assignment_state": "UNASSIGNED",
-			"display_name": "",
-			"observed_at": 0,
-			"project_id": "yaohachi-banana-lp",
-			"role": "claude_code",
-			"run_state": "UNKNOWN",
-			"slot_id": "slot3"
-		}
-	],
-	"revision": 12,
-	"schema_version": 2,
-	"secretary_binding": {
-		"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
-		"display_name": "ブギー"
-	},
-	"updated_at": 1791580402
-},
-	"schema_version": 5,
-	"usage": {
-	"observed_at": 1791712066,
-	"records": [
-		{
-			"basis": "remaining",
-			"id": "chatgpt_agent_weekly",
-			"percent": 81.0,
-			"period": "weekly",
-			"reset_remaining": {
-				"days": 6,
-				"hours": 19,
-				"minutes": null
-			}
-		},
-		{
-			"basis": "used",
-			"id": "claude_all_weekly",
-			"percent": 5.0,
-			"period": "weekly"
-		},
-		{
-			"basis": "used",
-			"id": "claude_session",
-			"not_started": false,
-			"percent": 4.0,
-			"period": "current_session"
-		}
-	]
+  "records": [
+    {
+      "assignee_display_name": "ブギー（統括）",
+      "assignee_role_state": {},
+      "blocker_kind": "",
+      "completion_evidence_id": "",
+      "current_phase": "統括：成果保管・制作保留",
+      "display_state": "未確認",
+      "execution_state": "TERMINAL",
+      "judgment_event_id": "",
+      "judgment_owner": "none",
+      "judgment_waiting": false,
+      "pc_dependency": false,
+      "pc_dependency_known": false,
+      "progress_known": false,
+      "progress_ratio": 0.0,
+      "project_display_name": "昭和の小学生・LINEスタンプ",
+      "project_id": "showa-schoolkids-line-stickers",
+      "raw_state_code": "held",
+      "resolution_state": "PENDING",
+      "slot_id": "primary",
+      "source_updated_at": 1791529461.0
+    },
+    {
+      "assignee_display_name": "ブギー（統括）",
+      "assignee_role_state": {},
+      "blocker_kind": "",
+      "completion_evidence_id": "",
+      "current_phase": "統括：検証中",
+      "display_state": "固定検証中",
+      "execution_state": "RUNNING",
+      "judgment_event_id": "",
+      "judgment_owner": "none",
+      "judgment_waiting": false,
+      "pc_dependency": false,
+      "pc_dependency_known": false,
+      "progress_known": false,
+      "progress_ratio": 0.0,
+      "project_display_name": "人の表示",
+      "project_id": "office-people-display",
+      "raw_state_code": "verifying",
+      "resolution_state": "PENDING",
+      "slot_id": "slot2",
+      "source_updated_at": 1791421873.0
+    },
+    {
+      "assignee_display_name": "ブギー（統括）",
+      "assignee_role_state": {},
+      "blocker_kind": "",
+      "completion_evidence_id": "",
+      "current_phase": "統括：円卓から解除・成果保管",
+      "display_state": "未確認",
+      "execution_state": "TERMINAL",
+      "judgment_event_id": "",
+      "judgment_owner": "none",
+      "judgment_waiting": false,
+      "pc_dependency": false,
+      "pc_dependency_known": false,
+      "progress_known": false,
+      "progress_ratio": 0.0,
+      "project_display_name": "模擬制作：八百八のバナナLP",
+      "project_id": "yaohachi-banana-lp",
+      "raw_state_code": "retired",
+      "resolution_state": "PENDING",
+      "slot_id": "slot3",
+      "source_updated_at": 1791497361.0
+    }
+  ],
+  "roles": {
+    "assignments": [
+      {
+        "actor_key": "041bdda0dd21031f1c642048acc61f35e89e395fd762d4c09447a1b404fd1862",
+        "assignment_key": "0c8d2f233230c7306dc25984d65f0e2ea21b1cf7f341b75ae23714d683d61d85",
+        "assignment_state": "ASSIGNED",
+        "display_name": "LINEスタンプ担当",
+        "observed_at": 0,
+        "project_id": "showa-schoolkids-line-stickers",
+        "role": "work",
+        "run_state": "UNKNOWN",
+        "slot_id": "primary"
+      },
+      {
+        "actor_key": "",
+        "assignment_key": "",
+        "assignment_state": "UNASSIGNED",
+        "display_name": "",
+        "observed_at": 0,
+        "project_id": "showa-schoolkids-line-stickers",
+        "role": "claude_code",
+        "run_state": "UNKNOWN",
+        "slot_id": "primary"
+      },
+      {
+        "actor_key": "1c5e7bc166476cac4bf31ee34587bab656edb179b2e61f272dc636ca44d35eef",
+        "assignment_key": "3a7b620679d794ebcc0de7204ad143a2d246c26ce5a9f5b881eb3fea4ad89b8d",
+        "assignment_state": "ASSIGNED",
+        "display_name": "人の表示・公開確認",
+        "observed_at": 0,
+        "project_id": "office-people-display",
+        "role": "work",
+        "run_state": "UNKNOWN",
+        "slot_id": "slot2"
+      },
+      {
+        "actor_key": "",
+        "assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
+        "assignment_state": "PLANNED",
+        "display_name": "Claude Code",
+        "observed_at": 1791423663,
+        "project_id": "office-people-display",
+        "role": "claude_code",
+        "run_state": "NOT_STARTED",
+        "slot_id": "slot2"
+      },
+      {
+        "actor_key": "",
+        "assignment_key": "",
+        "assignment_state": "UNASSIGNED",
+        "display_name": "",
+        "observed_at": 0,
+        "project_id": "yaohachi-banana-lp",
+        "role": "work",
+        "run_state": "UNKNOWN",
+        "slot_id": "slot3"
+      },
+      {
+        "actor_key": "",
+        "assignment_key": "",
+        "assignment_state": "UNASSIGNED",
+        "display_name": "",
+        "observed_at": 0,
+        "project_id": "yaohachi-banana-lp",
+        "role": "claude_code",
+        "run_state": "UNKNOWN",
+        "slot_id": "slot3"
+      }
+    ],
+    "revision": 13,
+    "schema_version": 2,
+    "secretary_binding": {
+      "actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
+      "display_name": "ブギー"
+    },
+    "updated_at": 1791718266
+  },
+  "schema_version": 5,
+  "usage": {
+    "observed_at": 1791712066.0,
+    "records": [
+      {
+        "basis": "remaining",
+        "id": "chatgpt_agent_weekly",
+        "percent": 81.0,
+        "period": "weekly",
+        "reset_remaining": {
+          "days": 6.0,
+          "hours": 19.0,
+          "minutes": null
+        }
+      },
+      {
+        "basis": "used",
+        "id": "claude_all_weekly",
+        "percent": 5.0,
+        "period": "weekly"
+      },
+      {
+        "basis": "used",
+        "id": "claude_session",
+        "not_started": false,
+        "percent": 4.0,
+        "period": "current_session"
+      }
+    ]
+  }
 }
-}
-
