@@ -53,24 +53,24 @@
 			"assignee_role_state": {
 
 			},
-			"blocker_kind": "verification",
+			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "停止",
-			"display_state": "安全停止",
+			"current_phase": "レビュー待ち",
+			"display_state": "Workレビュー待ち",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
+			"judgment_owner": "work_review",
+			"judgment_waiting": true,
 			"pc_dependency": false,
 			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
 			"project_display_name": "通知の実機確認",
 			"project_id": "notification-e2e-2026-10",
-			"raw_state_code": "failed",
-			"resolution_state": "UNKNOWN_BLOCKED",
+			"raw_state_code": "awaiting_review",
+			"resolution_state": "USER_ACTION_REQUIRED",
 			"slot_id": "slot3",
-			"source_updated_at": 1791954819
+			"source_updated_at": 1791958597
 		}
 	],
 	"roles": {
