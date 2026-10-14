@@ -152,16 +152,16 @@
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1791993080,
+		"observed_at": 1792014736,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 94,
+				"percent": 92,
 				"period": "weekly",
 				"reset_remaining": {
 					"days": 5,
-					"hours": 14,
+					"hours": 8,
 					"minutes": null
 				}
 			},
