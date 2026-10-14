@@ -49,28 +49,28 @@
 			"source_updated_at": 1791421873.0
 		},
 		{
-			"assignee_display_name": "ブギー（統括）",
+			"assignee_display_name": "Claude Code",
 			"assignee_role_state": {
 
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：着手待ち",
-			"display_state": "開始待ち",
-			"execution_state": "QUEUED",
+			"current_phase": "レビュー待ち",
+			"display_state": "Workレビュー待ち",
+			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
+			"judgment_owner": "work_review",
+			"judgment_waiting": true,
 			"pc_dependency": false,
 			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
 			"project_display_name": "通知の実機確認",
 			"project_id": "notification-e2e-2026-10",
-			"raw_state_code": "queued",
-			"resolution_state": "PENDING",
+			"raw_state_code": "awaiting_review",
+			"resolution_state": "USER_ACTION_REQUIRED",
 			"slot_id": "slot3",
-			"source_updated_at": 1791952009
+			"source_updated_at": 1791953192
 		}
 	],
 	"roles": {
@@ -150,7 +150,7 @@
 		},
 		"updated_at": 1791718266.0
 	},
-	"schema_version": 5.0,
+	"schema_version": 5,
 	"usage": {
 		"observed_at": 1791950275.0,
 		"records": [
