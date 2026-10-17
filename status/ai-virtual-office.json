@@ -57,8 +57,8 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
-				"project_id": "showa-schoolkids-line-stickers",
+				"observed_at": 0,
+				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "work",
 				"run_state": "UNKNOWN",
 				"slot_id": "primary"
@@ -68,8 +68,8 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
-				"project_id": "showa-schoolkids-line-stickers",
+				"observed_at": 0,
+				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "primary"
@@ -79,7 +79,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
+				"observed_at": 0,
 				"project_id": "office-people-display",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -90,7 +90,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
+				"observed_at": 0,
 				"project_id": "office-people-display",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -101,7 +101,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
+				"observed_at": 0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -112,20 +112,20 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0.0,
+				"observed_at": 0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 28.0,
-		"schema_version": 2.0,
+		"revision": 29,
+		"schema_version": 2,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792225592.0
+		"updated_at": 1792239521
 	},
 	"schema_version": 5,
 	"usage": {
