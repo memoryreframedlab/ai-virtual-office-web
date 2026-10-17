@@ -131,10 +131,10 @@
 				"slot_id": "slot3"
 			},
 			{
-				"actor_key": "",
-				"assignment_key": "",
-				"assignment_state": "UNASSIGNED",
-				"display_name": "",
+				"actor_key": "498303805c67a28ae6b4022505d3b8138c06a96333022956bfb9c8b02c14085b",
+				"assignment_key": "1173733b21d5f41f7a4a66a045af40a98b7960b0c98115daf8e3d026db377493",
+				"assignment_state": "ASSIGNED",
+				"display_name": "Claude Code",
 				"observed_at": 0,
 				"project_id": "req-66f6c5ea84fdada8a2398d5903541c09",
 				"role": "claude_code",
@@ -142,13 +142,13 @@
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 21,
+		"revision": 22,
 		"schema_version": 2,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792197505
+		"updated_at": 1792197515
 	},
 	"schema_version": 5,
 	"usage": {
