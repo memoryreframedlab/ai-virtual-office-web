@@ -7,7 +7,7 @@
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：成果保管・制作保留",
+			"current_phase": "統括：円卓から解除・成果保管",
 			"display_state": "未確認",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
@@ -19,10 +19,10 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "昭和の小学生・LINEスタンプ",
 			"project_id": "showa-schoolkids-line-stickers",
-			"raw_state_code": "held",
+			"raw_state_code": "released",
 			"resolution_state": "PENDING",
 			"slot_id": "primary",
-			"source_updated_at": 1791529461.0
+			"source_updated_at": 1792217520
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -70,7 +70,7 @@
 			"raw_state_code": "released",
 			"resolution_state": "PENDING",
 			"slot_id": "slot3",
-			"source_updated_at": 1792207545
+			"source_updated_at": 1792207545.0
 		}
 	],
 	"roles": {
@@ -80,7 +80,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "showa-schoolkids-line-stickers",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -91,7 +91,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "showa-schoolkids-line-stickers",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -102,7 +102,7 @@
 				"assignment_key": "3a7b620679d794ebcc0de7204ad143a2d246c26ce5a9f5b881eb3fea4ad89b8d",
 				"assignment_state": "ASSIGNED",
 				"display_name": "人の表示・公開確認",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-people-display",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -113,7 +113,7 @@
 				"assignment_key": "b9ec330ce703bc445f259d99def5a44d8c63e9a984a55287557b3e659213e7fb",
 				"assignment_state": "PLANNED",
 				"display_name": "Claude Code",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-people-display",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -124,7 +124,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -135,47 +135,47 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 27,
-		"schema_version": 2,
+		"revision": 27.0,
+		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792216781
+		"updated_at": 1792216781.0
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1792209105,
+		"observed_at": 1792209105.0,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 80,
+				"percent": 80.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 5,
-					"hours": 3,
+					"days": 5.0,
+					"hours": 3.0,
 					"minutes": null
 				}
 			},
 			{
 				"basis": "used",
 				"id": "claude_all_weekly",
-				"percent": 0,
+				"percent": 0.0,
 				"period": "weekly"
 			},
 			{
 				"basis": "used",
 				"id": "claude_session",
 				"not_started": false,
-				"percent": 3,
+				"percent": 3.0,
 				"period": "current_session"
 			}
 		]
