@@ -31,9 +31,17 @@ var FIXED_COMPLETE_TITLE = '仕事が完了しました';
 var FIXED_COMPLETE_BODY = '完了報告を確認してください';
 
 function isFixedNotificationText(title, body) {
-	return (title === FIXED_TITLE && body === FIXED_BODY)
+	return (title === 'デザイン担当の通知テスト' && body === '接続確認用です。元の完了通知ではありません')
+		|| (title === FIXED_TITLE && body === FIXED_BODY)
 		|| (title === FIXED_COMPLETE_TITLE && body === FIXED_COMPLETE_BODY);
 }
+
+// Read-only capability handshake before consuming the permanent test.
+self.addEventListener('message', function (event) {
+	if (event.data === 'resident-notification-test-v1' && event.ports && event.ports[0]) {
+		event.ports[0].postMessage('resident-notification-test-v1');
+	}
+});
 
 self.addEventListener('push', function (event) {
 	event.waitUntil(handlePush(event));
