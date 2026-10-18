@@ -25,15 +25,15 @@
 			"source_updated_at": 1792332545
 		},
 		{
-			"assignee_display_name": "ブギー（統括）",
+			"assignee_display_name": "Claude Code",
 			"assignee_role_state": {
 
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：円卓から解除・成果保管",
-			"display_state": "未確認",
-			"execution_state": "TERMINAL",
+			"current_phase": "実行準備",
+			"display_state": "実行中",
+			"execution_state": "RUNNING",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
 			"judgment_waiting": false,
@@ -41,12 +41,12 @@
 			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
-			"project_display_name": "人の表示",
-			"project_id": "office-people-display",
-			"raw_state_code": "released",
+			"project_display_name": "作業 380",
+			"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
+			"raw_state_code": "running",
 			"resolution_state": "PENDING",
 			"slot_id": "slot2",
-			"source_updated_at": 1792225670.0
+			"source_updated_at": 1792352351
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -152,30 +152,30 @@
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1792338601,
+		"observed_at": 1792338601.0,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 94,
+				"percent": 94.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 6,
-					"hours": 21,
+					"days": 6.0,
+					"hours": 21.0,
 					"minutes": null
 				}
 			},
 			{
 				"basis": "used",
 				"id": "claude_all_weekly",
-				"percent": 3,
+				"percent": 3.0,
 				"period": "weekly"
 			},
 			{
 				"basis": "used",
 				"id": "claude_session",
 				"not_started": true,
-				"percent": 0,
+				"percent": 0.0,
 				"period": "current_session"
 			}
 		]
