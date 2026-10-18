@@ -7,9 +7,9 @@
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "安全停止",
-			"display_state": "未確認",
-			"execution_state": "UNKNOWN",
+			"current_phase": "実行準備",
+			"display_state": "実行中",
+			"execution_state": "RUNNING",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
 			"judgment_waiting": false,
@@ -19,10 +19,10 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "作業 371",
 			"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
-			"raw_state_code": "safe_stopped_unknown",
-			"resolution_state": "UNKNOWN_BLOCKED",
+			"raw_state_code": "running",
+			"resolution_state": "PENDING",
 			"slot_id": "primary",
-			"source_updated_at": 1792325912
+			"source_updated_at": 1792329306
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
