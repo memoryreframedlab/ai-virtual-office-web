@@ -29,11 +29,11 @@
 			"assignee_role_state": {
 
 			},
-			"blocker_kind": "",
+			"blocker_kind": "quota",
 			"completion_evidence_id": "",
-			"current_phase": "実行準備",
-			"display_state": "実行中",
-			"execution_state": "RUNNING",
+			"current_phase": "上限で停止",
+			"display_state": "安全停止（利用上限）",
+			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
 			"judgment_waiting": false,
@@ -43,10 +43,10 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "作業 380",
 			"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
-			"raw_state_code": "running",
-			"resolution_state": "PENDING",
+			"raw_state_code": "safe_stopped_quota",
+			"resolution_state": "UNKNOWN_BLOCKED",
 			"slot_id": "slot2",
-			"source_updated_at": 1792353887
+			"source_updated_at": 1792354460
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -80,7 +80,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -91,7 +91,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -102,7 +102,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -113,7 +113,7 @@
 				"assignment_key": "02836d2b1fefbc2877a903f4c6b950b65a6bedeb8cbe8aebdf8395c82c69209a",
 				"assignment_state": "ASSIGNED",
 				"display_name": "Claude Code",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -124,7 +124,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -135,20 +135,20 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 35,
-		"schema_version": 2,
+		"revision": 35.0,
+		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792353925
+		"updated_at": 1792353925.0
 	},
 	"schema_version": 5,
 	"usage": {
