@@ -53,14 +53,14 @@
 	"roles": {
 		"assignments": [
 			{
-				"actor_key": "ca68c3bc828ecf6d1c60d8a58d28341a10bca68988775aa7e22dce2537863394",
-				"assignment_key": "d0983ace3d4672fd44c2d173994e3bda81c5fc92176ed22a8253abf006c1172a",
-				"assignment_state": "ASSIGNED",
-				"display_name": "WORK",
-				"observed_at": 1792241482,
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
+				"observed_at": 0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "work",
-				"run_state": "IDLE",
+				"run_state": "UNKNOWN",
 				"slot_id": "primary"
 			},
 			{
@@ -119,13 +119,13 @@
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 30,
+		"revision": 31,
 		"schema_version": 2,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792241561
+		"updated_at": 1792282864
 	},
 	"schema_version": 5,
 	"usage": {
