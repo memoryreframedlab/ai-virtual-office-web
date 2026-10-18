@@ -1,6 +1,29 @@
 {
 	"records": [
-		{"assignee_display_name":"WORK","assignee_role_state":{},"blocker_kind":"","completion_evidence_id":"f5d190c8854a33d98a6f6d7eeac02a5f1b8cf466bea432088d3fd52018598135","current_phase":"成果受入済み","display_state":"完了","execution_state":"TERMINAL","judgment_event_id":"","judgment_owner":"none","judgment_waiting":false,"pc_dependency":false,"pc_dependency_known":false,"progress_known":false,"progress_ratio":0.0,"project_display_name":"常駐デザイン担当の作成","project_id":"ext-1d893c433b666a850c3690f49f423602","raw_state_code":"completed","resolution_state":"COMPLETED","slot_id":"primary","source_updated_at":1792282567},
+		{
+			"assignee_display_name": "WORK",
+			"assignee_role_state": {
+
+			},
+			"blocker_kind": "",
+			"completion_evidence_id": "",
+			"current_phase": "統括：円卓から解除・成果保管",
+			"display_state": "未確認",
+			"execution_state": "TERMINAL",
+			"judgment_event_id": "",
+			"judgment_owner": "none",
+			"judgment_waiting": false,
+			"pc_dependency": false,
+			"pc_dependency_known": false,
+			"progress_known": false,
+			"progress_ratio": 0.0,
+			"project_display_name": "常駐デザイン担当の作成",
+			"project_id": "ext-1d893c433b666a850c3690f49f423602",
+			"raw_state_code": "released",
+			"resolution_state": "PENDING",
+			"slot_id": "primary",
+			"source_updated_at": 1792282894
+		},
 		{
 			"assignee_display_name": "ブギー（統括）",
 			"assignee_role_state": {
@@ -23,7 +46,7 @@
 			"raw_state_code": "released",
 			"resolution_state": "PENDING",
 			"slot_id": "slot2",
-			"source_updated_at": 1792225670
+			"source_updated_at": 1792225670.0
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -57,7 +80,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -68,7 +91,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -79,7 +102,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-people-display",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -90,7 +113,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "office-people-display",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -101,7 +124,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -112,49 +135,49 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 31,
-		"schema_version": 2,
+		"revision": 31.0,
+		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792282864
+		"updated_at": 1792282864.0
 	},
 	"schema_version": 5,
 	"usage": {
-	"observed_at": 1792273828,
-	"records": [
-		{
-			"basis": "remaining",
-			"id": "chatgpt_agent_weekly",
-			"percent": 97,
-			"period": "weekly",
-			"reset_remaining": {
-				"days": 6,
-				"hours": 23,
-				"minutes": null
+		"observed_at": 1792273828.0,
+		"records": [
+			{
+				"basis": "remaining",
+				"id": "chatgpt_agent_weekly",
+				"percent": 97.0,
+				"period": "weekly",
+				"reset_remaining": {
+					"days": 6.0,
+					"hours": 23.0,
+					"minutes": null
+				}
+			},
+			{
+				"basis": "used",
+				"id": "claude_all_weekly",
+				"percent": 2.0,
+				"period": "weekly"
+			},
+			{
+				"basis": "used",
+				"id": "claude_session",
+				"not_started": false,
+				"percent": 0.0,
+				"period": "current_session"
 			}
-		},
-		{
-			"basis": "used",
-			"id": "claude_all_weekly",
-			"percent": 2,
-			"period": "weekly"
-		},
-		{
-			"basis": "used",
-			"id": "claude_session",
-			"not_started": false,
-			"percent": 0,
-			"period": "current_session"
-		}
-	]
-}
+		]
+	}
 }
