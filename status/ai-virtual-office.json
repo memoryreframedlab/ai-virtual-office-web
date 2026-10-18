@@ -46,7 +46,7 @@
 			"raw_state_code": "running",
 			"resolution_state": "PENDING",
 			"slot_id": "slot2",
-			"source_updated_at": 1792353016
+			"source_updated_at": 1792353887
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -80,7 +80,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -91,7 +91,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "ext-1d893c433b666a850c3690f49f423602",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -102,7 +102,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -113,7 +113,7 @@
 				"assignment_key": "27a48f34bc1a4a68c18926d56968b74b859570f907ef74ee6b3adfb5613fa1f7",
 				"assignment_state": "ASSIGNED",
 				"display_name": "Claude Code",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
@@ -124,7 +124,7 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "work",
 				"run_state": "UNKNOWN",
@@ -135,20 +135,20 @@
 				"assignment_key": "",
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
-				"observed_at": 0,
+				"observed_at": 0.0,
 				"project_id": "req-81036ef27279621150d4553322855976",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 34,
-		"schema_version": 2,
+		"revision": 34.0,
+		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792353055
+		"updated_at": 1792353055.0
 	},
 	"schema_version": 5,
 	"usage": {
