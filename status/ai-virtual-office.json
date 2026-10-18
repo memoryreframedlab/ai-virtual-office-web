@@ -1,6 +1,6 @@
 {
 	"records": [
-		{"assignee_display_name":"WORK","assignee_role_state":{},"blocker_kind":"","completion_evidence_id":"","current_phase":"応答終了・次の作業待ち","display_state":"未確認","execution_state":"TERMINAL","judgment_event_id":"","judgment_owner":"none","judgment_waiting":false,"pc_dependency":false,"pc_dependency_known":false,"progress_known":false,"progress_ratio":0.0,"project_display_name":"常駐デザイン担当の作成","project_id":"ext-1d893c433b666a850c3690f49f423602","raw_state_code":"held","resolution_state":"PENDING","slot_id":"primary","source_updated_at":1792241482},
+		{"assignee_display_name":"WORK","assignee_role_state":{},"blocker_kind":"","completion_evidence_id":"f5d190c8854a33d98a6f6d7eeac02a5f1b8cf466bea432088d3fd52018598135","current_phase":"成果受入済み","display_state":"完了","execution_state":"TERMINAL","judgment_event_id":"","judgment_owner":"none","judgment_waiting":false,"pc_dependency":false,"pc_dependency_known":false,"progress_known":false,"progress_ratio":0.0,"project_display_name":"常駐デザイン担当の作成","project_id":"ext-1d893c433b666a850c3690f49f423602","raw_state_code":"completed","resolution_state":"COMPLETED","slot_id":"primary","source_updated_at":1792282567},
 		{
 			"assignee_display_name": "ブギー（統括）",
 			"assignee_role_state": {
