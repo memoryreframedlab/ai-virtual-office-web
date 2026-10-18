@@ -22,7 +22,7 @@
 			"raw_state_code": "safe_stopped_quota",
 			"resolution_state": "UNKNOWN_BLOCKED",
 			"slot_id": "primary",
-			"source_updated_at": 1792295434
+			"source_updated_at": 1792323690
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
@@ -152,30 +152,30 @@
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1792317315,
+		"observed_at": 1792317315.0,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 37,
+				"percent": 37.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 6,
-					"hours": 11,
+					"days": 6.0,
+					"hours": 11.0,
 					"minutes": null
 				}
 			},
 			{
 				"basis": "used",
 				"id": "claude_all_weekly",
-				"percent": 3,
+				"percent": 3.0,
 				"period": "weekly"
 			},
 			{
 				"basis": "used",
 				"id": "claude_session",
 				"not_started": true,
-				"percent": 0,
+				"percent": 0.0,
 				"period": "current_session"
 			}
 		]
