@@ -5,11 +5,11 @@
 			"assignee_role_state": {
 
 			},
-			"blocker_kind": "",
+			"blocker_kind": "quota",
 			"completion_evidence_id": "",
-			"current_phase": "実行準備",
-			"display_state": "実行中",
-			"execution_state": "RUNNING",
+			"current_phase": "上限で停止",
+			"display_state": "安全停止（利用上限）",
+			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
 			"judgment_waiting": false,
@@ -19,10 +19,10 @@
 			"progress_ratio": 0.0,
 			"project_display_name": "作業 371",
 			"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
-			"raw_state_code": "running",
-			"resolution_state": "PENDING",
+			"raw_state_code": "safe_stopped_quota",
+			"resolution_state": "UNKNOWN_BLOCKED",
 			"slot_id": "primary",
-			"source_updated_at": 1792294721
+			"source_updated_at": 1792295434
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
