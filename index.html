@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-<script>window.__ashuramanRuntimeConfig = {"gateway_origin":"https://ai-virtual-office-auth-gateway.ai-virtual-office.workers.dev"};</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>AI仮想オフィス 試作v0.1</title>
@@ -91,6 +90,20 @@ body {
 	z-index: 1;
 }
 		</style>
+		<script>
+// UI-only cancellation bridge: Web touchcancel is not consistently marked on Godot's release event.
+(() => {
+ const canceled = new Set();
+ // Touch.identifier is the index delivered by Godot Web; PointerEvent.pointerId is a different namespace.
+ document.addEventListener('touchstart', event => {
+  for (const touch of event.changedTouches) canceled.delete(touch.identifier);
+ }, {capture: true, passive: true});
+ document.addEventListener('touchcancel', event => {
+  for (const touch of event.changedTouches) canceled.add(touch.identifier);
+ }, {capture: true, passive: true});
+ window.__officeConsumeTouchCancellation = index => canceled.delete(index);
+})();
+		</script>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <meta name="robots" content="noindex,nofollow">
@@ -134,7 +147,7 @@ if (OFFICE_PERMISSION_PROBE) {
 		</script>
 		<script>
 if (!OFFICE_PERMISSION_PROBE) {
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":11307740,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":26093900,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
