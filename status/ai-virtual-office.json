@@ -152,16 +152,16 @@
 	},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1792403574,
+		"observed_at": 1792425419,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 26.0,
+				"percent": 19.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 6,
-					"hours": 3,
+					"days": 5.0,
+					"hours": 21.0,
 					"minutes": null
 				}
 			},
@@ -174,8 +174,8 @@
 			{
 				"basis": "used",
 				"id": "claude_session",
-				"not_started": false,
-				"percent": 1.0,
+				"not_started": true,
+				"percent": 0.0,
 				"period": "current_session"
 			}
 		]
