@@ -2,13 +2,13 @@
   "employees": {
     "kei": {
       "employee_id": "kei",
-      "event_id": "0bd14578b47ee9984fafa5e42b87f7b2a82a9c9897698c66f1038602ff91a3df",
+      "event_id": "b9cd0c43bb064aa6bbf587286f24b1e4be7a0bb5cfd25fb4fe759e82dafc29e6",
       "result_digest": "",
-      "revision": 1,
+      "revision": 2,
       "schema_version": 1,
       "seat_id": "resident-kei",
-      "state": "pending",
-      "updated_at": 1792478869
+      "state": "needs_human",
+      "updated_at": 1792478982
     }
   },
   "schema_version": 1
