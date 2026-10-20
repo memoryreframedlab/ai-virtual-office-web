@@ -1,0 +1,15 @@
+{
+  "employees": {
+    "kei": {
+      "employee_id": "kei",
+      "event_id": "0bd14578b47ee9984fafa5e42b87f7b2a82a9c9897698c66f1038602ff91a3df",
+      "result_digest": "",
+      "revision": 1,
+      "schema_version": 1,
+      "seat_id": "resident-kei",
+      "state": "pending",
+      "updated_at": 1792478869
+    }
+  },
+  "schema_version": 1
+}
