@@ -103,7 +103,7 @@
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
 				"observed_at": 0.0,
-				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
+				"project_id": "req-5f964ee41870cdaf4cac33f2d92093dc",
 				"role": "work",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot2"
@@ -114,7 +114,7 @@
 				"assignment_state": "UNASSIGNED",
 				"display_name": "",
 				"observed_at": 0.0,
-				"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
+				"project_id": "req-5f964ee41870cdaf4cac33f2d92093dc",
 				"role": "claude_code",
 				"run_state": "UNKNOWN",
 				"slot_id": "slot2"
@@ -142,13 +142,13 @@
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 45,
+		"revision": 46,
 		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792762609
+		"updated_at": 1792762660
 	},
 	"schema_version": 5,
 	"usage": {
