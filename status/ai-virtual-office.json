@@ -25,14 +25,38 @@
 			"source_updated_at": 1792487938
 		},
 		{
-			"assignee_display_name": "ブギー（統括）",
+			"assignee_display_name": "Claude Code",
 			"assignee_role_state": {
 
 			},
 			"blocker_kind": "",
 			"completion_evidence_id": "",
-			"current_phase": "統括：円卓から解除・成果保管",
+			"current_phase": "安全停止",
 			"display_state": "未確認",
+			"execution_state": "UNKNOWN",
+			"judgment_event_id": "",
+			"judgment_owner": "none",
+			"judgment_waiting": false,
+			"pc_dependency": false,
+			"pc_dependency_known": false,
+			"progress_known": false,
+			"progress_ratio": 0.0,
+			"project_display_name": "作業 399",
+			"project_id": "req-5f964ee41870cdaf4cac33f2d92093dc",
+			"raw_state_code": "safe_stopped_unknown",
+			"resolution_state": "UNKNOWN_BLOCKED",
+			"slot_id": "slot2",
+			"source_updated_at": 1792520321
+		},
+		{
+			"assignee_display_name": "Claude Code",
+			"assignee_role_state": {
+
+			},
+			"blocker_kind": "verification",
+			"completion_evidence_id": "",
+			"current_phase": "停止",
+			"display_state": "安全停止",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
 			"judgment_owner": "none",
@@ -41,36 +65,12 @@
 			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
-			"project_display_name": "作業 380",
-			"project_id": "req-688f804a23e8a7ad5d6beda4250c8de7",
-			"raw_state_code": "released",
-			"resolution_state": "PENDING",
-			"slot_id": "slot2",
-			"source_updated_at": 1792518633
-		},
-		{
-			"assignee_display_name": "Claude Code",
-			"assignee_role_state": {
-
-			},
-			"blocker_kind": "",
-			"completion_evidence_id": "",
-			"current_phase": "レビュー待ち",
-			"display_state": "Workレビュー待ち",
-			"execution_state": "TERMINAL",
-			"judgment_event_id": "",
-			"judgment_owner": "work_review",
-			"judgment_waiting": true,
-			"pc_dependency": false,
-			"pc_dependency_known": false,
-			"progress_known": false,
-			"progress_ratio": 0.0,
 			"project_display_name": "作業 396",
 			"project_id": "req-934f513efa0ec1a11fb82a827381b672",
-			"raw_state_code": "awaiting_review",
-			"resolution_state": "USER_ACTION_REQUIRED",
+			"raw_state_code": "failed",
+			"resolution_state": "UNKNOWN_BLOCKED",
 			"slot_id": "slot3",
-			"source_updated_at": 1792500766
+			"source_updated_at": 1792762457
 		}
 	],
 	"roles": {
