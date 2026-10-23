@@ -76,8 +76,8 @@
 	"roles": {
 		"assignments": [
 			{
-				"actor_key": "9a3441f1fda3aebc6749c9a587ccf6993c4f7bb3debb99299c481c4487286cf0",
-				"assignment_key": "eefb8f256d6c6de9c40ad5579e16df752b1938237b8339ce7e8e7c5b13862236",
+				"actor_key": "f114785c920edaaf2de1868ec64595961ada5481d8bd09035df1e9a6bf7722c0",
+				"assignment_key": "af6f7e347df6b035733b23e48fde8f083aca0fa50c76ace05e55e63d6e9b05f6",
 				"assignment_state": "ASSIGNED",
 				"display_name": "WORK",
 				"observed_at": 0.0,
@@ -142,13 +142,13 @@
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 43,
+		"revision": 44,
 		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792673466
+		"updated_at": 1792727495
 	},
 	"schema_version": 5,
 	"usage": {
