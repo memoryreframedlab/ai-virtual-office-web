@@ -5,24 +5,24 @@
 			"assignee_role_state": {
 
 			},
-			"blocker_kind": "",
+			"blocker_kind": "verification",
 			"completion_evidence_id": "",
-			"current_phase": "差戻し保留（制作未起動）",
-			"display_state": "差戻し保留（制作未起動）",
+			"current_phase": "停止",
+			"display_state": "安全停止",
 			"execution_state": "TERMINAL",
 			"judgment_event_id": "",
-			"judgment_owner": "work_review",
-			"judgment_waiting": true,
+			"judgment_owner": "none",
+			"judgment_waiting": false,
 			"pc_dependency": false,
 			"pc_dependency_known": false,
 			"progress_known": false,
 			"progress_ratio": 0.0,
 			"project_display_name": "作業 371",
 			"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
-			"raw_state_code": "review_held",
-			"resolution_state": "USER_ACTION_REQUIRED",
+			"raw_state_code": "failed",
+			"resolution_state": "UNKNOWN_BLOCKED",
 			"slot_id": "primary",
-			"source_updated_at": 1792487938
+			"source_updated_at": 1792830819
 		},
 		{
 			"assignee_display_name": "ブギー（統括）",
