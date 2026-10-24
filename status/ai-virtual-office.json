@@ -1,29 +1,6 @@
 {
 	"records": [
-		{
-			"assignee_display_name": "Claude Code",
-			"assignee_role_state": {
-
-			},
-			"blocker_kind": "verification",
-			"completion_evidence_id": "",
-			"current_phase": "停止",
-			"display_state": "安全停止",
-			"execution_state": "TERMINAL",
-			"judgment_event_id": "",
-			"judgment_owner": "none",
-			"judgment_waiting": false,
-			"pc_dependency": false,
-			"pc_dependency_known": false,
-			"progress_known": false,
-			"progress_ratio": 0.0,
-			"project_display_name": "作業 371",
-			"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
-			"raw_state_code": "failed",
-			"resolution_state": "UNKNOWN_BLOCKED",
-			"slot_id": "primary",
-			"source_updated_at": 1792830819
-		},
+		{"assignee_display_name": "ブギー（統括）", "assignee_role_state": {}, "blocker_kind": "", "completion_evidence_id": "", "current_phase": "統括：円卓から解除・成果保管", "display_state": "未確認", "execution_state": "TERMINAL", "judgment_event_id": "", "judgment_owner": "none", "judgment_waiting": false, "pc_dependency": false, "pc_dependency_known": false, "progress_known": false, "progress_ratio": 0.0, "project_display_name": "作業 371", "project_id": "req-22bb77b7c51fb54f2001bf179f3fc545", "raw_state_code": "released", "resolution_state": "PENDING", "slot_id": "primary", "source_updated_at": 1792844048},
 		{
 			"assignee_display_name": "ブギー（統括）",
 			"assignee_role_state": {
@@ -76,10 +53,10 @@
 	"roles": {
 		"assignments": [
 			{
-				"actor_key": "f114785c920edaaf2de1868ec64595961ada5481d8bd09035df1e9a6bf7722c0",
-				"assignment_key": "af6f7e347df6b035733b23e48fde8f083aca0fa50c76ace05e55e63d6e9b05f6",
-				"assignment_state": "ASSIGNED",
-				"display_name": "WORK",
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
 				"observed_at": 0.0,
 				"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
 				"role": "work",
@@ -87,10 +64,10 @@
 				"slot_id": "primary"
 			},
 			{
-				"actor_key": "498303805c67a28ae6b4022505d3b8138c06a96333022956bfb9c8b02c14085b",
-				"assignment_key": "514e637e6cfe5086ff322f3408ca67324b8beb8df509c42e9d43cd548bf1a39a",
-				"assignment_state": "ASSIGNED",
-				"display_name": "Claude Code",
+				"actor_key": "",
+				"assignment_key": "",
+				"assignment_state": "UNASSIGNED",
+				"display_name": "",
 				"observed_at": 0,
 				"project_id": "req-22bb77b7c51fb54f2001bf179f3fc545",
 				"role": "claude_code",
@@ -142,13 +119,13 @@
 				"slot_id": "slot3"
 			}
 		],
-		"revision": 59,
+		"revision": 60,
 		"schema_version": 2.0,
 		"secretary_binding": {
 			"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa",
 			"display_name": "ブギー"
 		},
-		"updated_at": 1792830992
+		"updated_at": 1792834886
 	},
 	"schema_version": 5,
 	"usage": {
