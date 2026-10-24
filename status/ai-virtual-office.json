@@ -24,8 +24,54 @@
 			"slot_id": "primary",
 			"source_updated_at": 1792487938
 		},
-		{"assignee_display_name": "ブギー（統括）", "assignee_role_state": {}, "blocker_kind": "", "completion_evidence_id": "", "current_phase": "統括：円卓から解除・成果保管", "display_state": "未確認", "execution_state": "TERMINAL", "judgment_event_id": "", "judgment_owner": "none", "judgment_waiting": false, "pc_dependency": false, "pc_dependency_known": false, "progress_known": false, "progress_ratio": 0.0, "project_display_name": "作業 399", "project_id": "req-5f964ee41870cdaf4cac33f2d92093dc", "raw_state_code": "released", "resolution_state": "PENDING", "slot_id": "slot2", "source_updated_at": 1792830100},
-		{"assignee_display_name": "ブギー（統括）", "assignee_role_state": {}, "blocker_kind": "", "completion_evidence_id": "", "current_phase": "統括：円卓から解除・成果保管", "display_state": "未確認", "execution_state": "TERMINAL", "judgment_event_id": "", "judgment_owner": "none", "judgment_waiting": false, "pc_dependency": false, "pc_dependency_known": false, "progress_known": false, "progress_ratio": 0.0, "project_display_name": "作業 396", "project_id": "req-934f513efa0ec1a11fb82a827381b672", "raw_state_code": "released", "resolution_state": "PENDING", "slot_id": "slot3", "source_updated_at": 1792798129}
+		{
+			"assignee_display_name": "ブギー（統括）",
+			"assignee_role_state": {
+
+			},
+			"blocker_kind": "",
+			"completion_evidence_id": "",
+			"current_phase": "統括：円卓から解除・成果保管",
+			"display_state": "未確認",
+			"execution_state": "TERMINAL",
+			"judgment_event_id": "",
+			"judgment_owner": "none",
+			"judgment_waiting": false,
+			"pc_dependency": false,
+			"pc_dependency_known": false,
+			"progress_known": false,
+			"progress_ratio": 0.0,
+			"project_display_name": "作業 399",
+			"project_id": "req-5f964ee41870cdaf4cac33f2d92093dc",
+			"raw_state_code": "released",
+			"resolution_state": "PENDING",
+			"slot_id": "slot2",
+			"source_updated_at": 1792830100.0
+		},
+		{
+			"assignee_display_name": "Claude Code",
+			"assignee_role_state": {
+
+			},
+			"blocker_kind": "",
+			"completion_evidence_id": "",
+			"current_phase": "安全停止",
+			"display_state": "未確認",
+			"execution_state": "UNKNOWN",
+			"judgment_event_id": "",
+			"judgment_owner": "none",
+			"judgment_waiting": false,
+			"pc_dependency": false,
+			"pc_dependency_known": false,
+			"progress_known": false,
+			"progress_ratio": 0.0,
+			"project_display_name": "作業 427",
+			"project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b",
+			"raw_state_code": "safe_stopped_unknown",
+			"resolution_state": "UNKNOWN_BLOCKED",
+			"slot_id": "slot3",
+			"source_updated_at": 1792799991
+		}
 	],
 	"roles": {
 		"assignments": [
