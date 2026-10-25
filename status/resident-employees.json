@@ -19,6 +19,16 @@
       "seat_id": "resident-kei",
       "state": "awaiting_work",
       "updated_at": 1792481946
+    },
+    "luca": {
+      "employee_id": "luca",
+      "event_id": "9f7f8bead46719f61b4928fc02e86339fb55e035a6b20a066d1065bbaea3d3a3",
+      "result_digest": "",
+      "revision": 1,
+      "schema_version": 1,
+      "seat_id": "resident-luca",
+      "state": "pending",
+      "updated_at": 1792961760
     }
   },
   "schema_version": 1
