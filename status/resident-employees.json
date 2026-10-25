@@ -2,13 +2,13 @@
   "employees": {
     "amina": {
       "employee_id": "amina",
-      "event_id": "c8c0dcb2c5ef8975f36e2f82bc73958e8897e01486a81d88385737dd0b382193",
-      "result_digest": "",
-      "revision": 1,
+      "event_id": "65636ba53fda5de73773e63a1adb9a2a74cffe6476cb38933059cc73ba50e3aa",
+      "result_digest": "e98be7af928f279c1da1bc21409483486f2e32467f7cac1a9cd4f8dc438d2aad",
+      "revision": 2,
       "schema_version": 1,
       "seat_id": "resident-amina",
-      "state": "pending",
-      "updated_at": 1792961570
+      "state": "awaiting_work",
+      "updated_at": 1792961662
     },
     "kei": {
       "employee_id": "kei",
