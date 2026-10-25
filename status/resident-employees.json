@@ -1,5 +1,15 @@
 {
   "employees": {
+    "amina": {
+      "employee_id": "amina",
+      "event_id": "c8c0dcb2c5ef8975f36e2f82bc73958e8897e01486a81d88385737dd0b382193",
+      "result_digest": "",
+      "revision": 1,
+      "schema_version": 1,
+      "seat_id": "resident-amina",
+      "state": "pending",
+      "updated_at": 1792961570
+    },
     "kei": {
       "employee_id": "kei",
       "event_id": "a4e2eb889007fee04be7d22d9daeb40996fd30e570062f992b7b7a9239f10033",
