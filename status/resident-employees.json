@@ -12,13 +12,13 @@
     },
     "kei": {
       "employee_id": "kei",
-      "event_id": "241a4cf7b519832df35582eb15c8c51183347c453c4736a32ea9a5a87ec4a478",
-      "result_digest": "0d5a77c2913a0dee553d33bb93bb78ce38246a68e9a58d847a57aaf8c69de9d6",
-      "revision": 5,
+      "event_id": "a664fa41b3f77cc815214bec6649296e4e5ac3b7e7ce14a41f3a4cad13fc7b56",
+      "result_digest": "",
+      "revision": 6,
       "schema_version": 1,
       "seat_id": "resident-kei",
-      "state": "completed",
-      "updated_at": 1792962158
+      "state": "pending",
+      "updated_at": 1793313056
     },
     "luca": {
       "employee_id": "luca",
