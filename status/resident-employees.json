@@ -32,13 +32,13 @@
     },
     "mina": {
       "employee_id": "mina",
-      "event_id": "a6c1525875c25ea190ed2630e3eaf234231093981beaf73a9955b40a1eb401a2",
-      "result_digest": "48e95407ce0ccd5aff8f3bc887abf0438c8518cbefb366abdecaf4b4413cf1c2",
-      "revision": 7,
+      "event_id": "cc21f748cb5ffcde1753b5f5e115cf94802e53486334a140090cfca026b3af6c",
+      "result_digest": "e101dc8629f89a938f760ca97e09e3bd8dd511a76869474c297924e2c8b3b47b",
+      "revision": 8,
       "schema_version": 1,
       "seat_id": "resident-mina",
-      "state": "pending",
-      "updated_at": 1793322912
+      "state": "needs_human",
+      "updated_at": 1793323075
     }
   },
   "schema_version": 1
