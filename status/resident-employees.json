@@ -22,13 +22,13 @@
     },
     "luca": {
       "employee_id": "luca",
-      "event_id": "87beafd647e72bd1dc4f43a03ffa2e22cea4aded53b0808c1293a23446c71a7b",
-      "result_digest": "5f81799960966dcfbb4223131ad6c0ada0c6d3bb91513fdaa6af467b0112405c",
-      "revision": 4,
+      "event_id": "ad8f61ddf2d2b632c508d24b0aa64ed1b3e84be48a579e9ebe792b79c6c07357",
+      "result_digest": "",
+      "revision": 5,
       "schema_version": 1,
       "seat_id": "resident-luca",
-      "state": "completed",
-      "updated_at": 1793321630
+      "state": "pending",
+      "updated_at": 1793322177
     },
     "mina": {
       "employee_id": "mina",
