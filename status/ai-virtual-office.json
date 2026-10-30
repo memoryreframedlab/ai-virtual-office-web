@@ -3,23 +3,23 @@
 	"roles": {"assignments": [{"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "work", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-5f964ee41870cdaf4cac33f2d92093dc", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot2"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-5f964ee41870cdaf4cac33f2d92093dc", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "slot2"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot3"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "slot3"}], "revision": 100, "schema_version": 2, "secretary_binding": {"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa", "display_name": "ブギー"}, "updated_at": 1792957515},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1793202754,
+		"observed_at": 1793395573,
 		"records": [
 			{
 				"basis": "remaining",
 				"id": "chatgpt_agent_weekly",
-				"percent": 98.0,
+				"percent": 95.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 6.0,
-					"hours": 14.0,
+					"days": 4,
+					"hours": 9,
 					"minutes": null
 				}
 			},
 			{
 				"basis": "used",
 				"id": "claude_all_weekly",
-				"percent": 15.0,
+				"percent": 17.0,
 				"period": "weekly"
 			},
 			{
