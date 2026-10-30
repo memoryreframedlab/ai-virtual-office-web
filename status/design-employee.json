@@ -1,10 +1,10 @@
 {
   "employee_id": "design",
-  "event_id": "f1cd3311619ecfa7fc3856e9c1d28057930114d5940e8c5f4c16d223f9767141",
-  "result_digest": "442372067aaa6908bda75657712e96beecb4c62486662faa9f85578b8cceb767",
-  "revision": 15,
+  "event_id": "ff610eb402b3901736631c079245da9cf487b2223632cf33fed5e1103a023de0",
+  "result_digest": "5fe8d7f8cd632f99d222338adb5901a26da8e86385b90135498126c60d70d73a",
+  "revision": 16,
   "schema_version": 1,
   "seat_id": "resident-design",
-  "state": "pending",
-  "updated_at": 1793363299
+  "state": "needs_human",
+  "updated_at": 1793363448
 }
