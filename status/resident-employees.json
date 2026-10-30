@@ -39,6 +39,16 @@
       "seat_id": "resident-mina",
       "state": "needs_human",
       "updated_at": 1793323075
+    },
+    "sofia": {
+      "employee_id": "sofia",
+      "event_id": "27821f2325a8baae3556bc724ec93719425969803fc52c0c6243dea219da1c32",
+      "result_digest": "",
+      "revision": 1,
+      "schema_version": 1,
+      "seat_id": "resident-sofia",
+      "state": "pending",
+      "updated_at": 1793397789
     }
   },
   "schema_version": 1
