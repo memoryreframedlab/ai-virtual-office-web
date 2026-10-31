@@ -11,8 +11,8 @@
 				"percent": 93.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 3.0,
-					"hours": 19.0,
+					"days": 3,
+					"hours": 19,
 					"minutes": null
 				}
 			},
