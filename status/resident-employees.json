@@ -32,13 +32,13 @@
     },
     "mina": {
       "employee_id": "mina",
-      "event_id": "d81439f6678c3177e520c2438cc54fa126d580b73badb6846958b4218c504e94",
+      "event_id": "fb0dca3cb461056aa19e9adbc0d032f3c2dcfbfd99a08eb1fe0b772468d3e659",
       "result_digest": "9e91fc6c3c0c5ccf3eed9f9260da3d4062c5ef5d2e31eca84afa0e621198610a",
-      "revision": 26,
+      "revision": 27,
       "schema_version": 1,
       "seat_id": "resident-mina",
-      "state": "awaiting_work",
-      "updated_at": 1794287992
+      "state": "pending",
+      "updated_at": 1794288306
     },
     "sofia": {
       "employee_id": "sofia",
