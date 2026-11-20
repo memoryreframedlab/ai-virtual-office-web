@@ -42,13 +42,13 @@
     },
     "sofia": {
       "employee_id": "sofia",
-      "event_id": "3c3ac51fccfc651275bc11745296d52295f3b9a35bb1ef70bb6f49f46829f77b",
-      "result_digest": "",
-      "revision": 53,
+      "event_id": "7d6a355e0ff86bae65ba19ab5da316af8109cb66c540549685d54c92b5cda882",
+      "result_digest": "8739de79bc61b77159ebf50fd974edc63b4dafaaff32d2cb97b5e43a9b58d9f5",
+      "revision": 54,
       "schema_version": 1,
       "seat_id": "resident-sofia",
-      "state": "pending",
-      "updated_at": 1795147396
+      "state": "awaiting_work",
+      "updated_at": 1795147554
     }
   },
   "schema_version": 1
