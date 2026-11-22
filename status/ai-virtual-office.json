@@ -3,7 +3,7 @@
 	"roles": {"assignments": [{"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "work", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-446", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot2"}, {"actor_key": "498303805c67a28ae6b4022505d3b8138c06a96333022956bfb9c8b02c14085b", "assignment_key": "e970b0659c8f120bc065c14017352f356c8ee5a16743c0d9f75d5395b4440598", "assignment_state": "ASSIGNED", "display_name": "Claude Code", "observed_at": 1795178565, "project_id": "issue-446", "role": "claude_code", "run_state": "NOT_STARTED", "slot_id": "slot2"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot3"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "slot3"}], "revision": 103, "schema_version": 2, "secretary_binding": {"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa", "display_name": "ブギー"}, "updated_at": 1795178565},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1795319519,
+		"observed_at": 1795341236,
 		"records": [
 			{
 				"basis": "remaining",
@@ -11,8 +11,8 @@
 				"percent": 93.0,
 				"period": "weekly",
 				"reset_remaining": {
-					"days": 3.0,
-					"hours": 3.0,
+					"days": 2.0,
+					"hours": 21.0,
 					"minutes": null
 				}
 			},
