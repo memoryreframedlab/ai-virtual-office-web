@@ -3,7 +3,7 @@
 	"roles": {"assignments": [{"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "work", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-443", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "primary"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "issue-446", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot2"}, {"actor_key": "498303805c67a28ae6b4022505d3b8138c06a96333022956bfb9c8b02c14085b", "assignment_key": "e970b0659c8f120bc065c14017352f356c8ee5a16743c0d9f75d5395b4440598", "assignment_state": "ASSIGNED", "display_name": "Claude Code", "observed_at": 1795721323, "project_id": "issue-446", "role": "claude_code", "run_state": "NOT_STARTED", "slot_id": "slot2"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "work", "run_state": "UNKNOWN", "slot_id": "slot3"}, {"actor_key": "", "assignment_key": "", "assignment_state": "UNASSIGNED", "display_name": "", "observed_at": 0, "project_id": "req-275afdfe5c504ee943fe58adb4fa2e6b", "role": "claude_code", "run_state": "UNKNOWN", "slot_id": "slot3"}], "revision": 105, "schema_version": 2, "secretary_binding": {"actor_key": "8fa181e4672117433ffff32fc5bf2c89c2a501c19d151f85e8568ae6483905aa", "display_name": "ブギー"}, "updated_at": 1795721323},
 	"schema_version": 5,
 	"usage": {
-		"observed_at": 1795816460,
+		"observed_at": 1795837718,
 		"records": [
 			{
 				"basis": "remaining",
@@ -12,20 +12,20 @@
 				"period": "weekly",
 				"reset_remaining": {
 					"days": 4.0,
-					"hours": 10.0,
+					"hours": 4.0,
 					"minutes": null
 				}
 			},
 			{
 				"basis": "used",
 				"id": "claude_all_weekly",
-				"percent": 26.0,
+				"percent": 2.0,
 				"period": "weekly"
 			},
 			{
 				"basis": "used",
 				"id": "claude_session",
-				"not_started": true,
+				"not_started": false,
 				"percent": 0.0,
 				"period": "current_session"
 			}
